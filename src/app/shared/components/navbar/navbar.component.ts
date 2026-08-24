@@ -22,16 +22,13 @@ import { CartDrawerComponent } from '../cart-drawer/cart-drawer.component';
             </div>
           </a>
 
-          <!-- Search Shortcut (Desktop & Tablet) -->
-          <div class="navbar-search hide-mobile" (click)="goToSearch()">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
-            <span>Search 5000+ groceries in Jabalpur...</span>
-          </div>
+          
 
           <!-- Navigation Links (Desktop) -->
           <ul class="navbar-links hide-mobile">
             <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
             <li><a routerLink="/catalog" routerLinkActive="active">Store Catalog</a></li>
+            <li><a routerLink="/offers" routerLinkActive="active" class="offers-link">🏷️ Special Offers</a></li>
             <li><a routerLink="/about" routerLinkActive="active">About KSM</a></li>
             <li><a routerLink="/reviews" routerLinkActive="active">Reviews</a></li>
             <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
@@ -40,7 +37,7 @@ import { CartDrawerComponent } from '../cart-drawer/cart-drawer.component';
           <!-- Actions -->
           <div class="navbar-actions">
             <!-- WhatsApp Order Quick Button -->
-            <a href="https://wa.me/917848827245" target="_blank" class="wa-quick-btn hide-mobile">
+            <a href="https://wa.me/919876543210" target="_blank" class="wa-quick-btn hide-mobile">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Z"/></svg>
               <span>WhatsApp Order</span>
             </a>
@@ -74,6 +71,7 @@ import { CartDrawerComponent } from '../cart-drawer/cart-drawer.component';
             <ul>
               <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
               <li><a routerLink="/catalog" (click)="closeMenu()">Store Catalog</a></li>
+              <li><a routerLink="/offers" (click)="closeMenu()">🏷️ Special Offers</a></li>
               <li><a routerLink="/about" (click)="closeMenu()">About KSM</a></li>
               <li><a routerLink="/reviews" (click)="closeMenu()">Reviews</a></li>
               <li><a routerLink="/contact" (click)="closeMenu()">Contact Us</a></li>
@@ -177,6 +175,10 @@ import { CartDrawerComponent } from '../cart-drawer/cart-drawer.component';
     .navbar-links a:hover, .navbar-links a.active {
       color: var(--primary);
       font-weight: 600;
+    }
+    .offers-link {
+      color: #D97706 !important;
+      font-weight: 700 !important;
     }
     .navbar-links a.active::after {
       content: '';

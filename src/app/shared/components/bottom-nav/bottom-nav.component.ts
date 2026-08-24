@@ -19,6 +19,11 @@ import { CartService } from '../../../core/services/cart.service';
           <span>Catalog</span>
         </a>
 
+        <a routerLink="/offers" routerLinkActive="active" class="bottom-nav-item offers-item">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z"/></svg>
+          <span>Offers</span>
+        </a>
+
         <!-- Cart Drawer Toggle -->
         <button class="bottom-nav-item cart-item-btn" (click)="toggleCart()">
           <div class="cart-icon-wrapper">
@@ -30,12 +35,7 @@ import { CartService } from '../../../core/services/cart.service';
           <span>Cart</span>
         </button>
 
-        <a routerLink="/contact" routerLinkActive="active" class="bottom-nav-item">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
-          <span>Store Info</span>
-        </a>
-
-        <a href="https://wa.me/917848827245" target="_blank" class="bottom-nav-item wa-item">
+        <a href="https://wa.me/919876543210" target="_blank" class="bottom-nav-item wa-item">
           <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2Z"/></svg>
           <span>WhatsApp</span>
         </a>
@@ -73,6 +73,9 @@ import { CartService } from '../../../core/services/cart.service';
     }
     .bottom-nav-item.active, .bottom-nav-item:hover {
       color: var(--primary);
+    }
+    .offers-item.active, .offers-item:hover {
+      color: #F59E0B;
     }
     .cart-icon-wrapper {
       position: relative;
