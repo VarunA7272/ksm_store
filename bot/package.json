@@ -1,0 +1,16 @@
+{
+  "name": "ksm-telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram AI Admin Bot for Khandelwal Supermart (KSM) with Cloudinary & Supabase",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@supabase/supabase-js": "^2.48.1",
+    "cloudinary": "^2.5.1",
+    "dotenv": "^16.4.7",
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
