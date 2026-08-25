@@ -203,13 +203,22 @@ export class SupabaseService {
     }
   }
 
-  private initMockData() {
+  private async initMockData() {
     try {
       const storedCats = localStorage.getItem('ksm_mock_cats');
       this.mockCategories = storedCats ? JSON.parse(storedCats) : INITIAL_CATEGORIES;
 
       const storedProds = localStorage.getItem('ksm_mock_prods');
-      this.mockProducts = storedProds ? JSON.parse(storedProds) : INITIAL_PRODUCTS;
+      if (storedProds) {
+        const parsed = JSON.parse(storedProds);
+        if (Array.isArray(parsed) && parsed.length > 10) {
+          this.mockProducts = parsed;
+        } else {
+          await this.loadFullMappedItemList();
+        }
+      } else {
+        await this.loadFullMappedItemList();
+      }
 
       const storedRevs = localStorage.getItem('ksm_mock_revs');
       this.mockReviews = storedRevs ? JSON.parse(storedRevs) : INITIAL_REVIEWS;
@@ -217,6 +226,21 @@ export class SupabaseService {
       this.mockCategories = [...INITIAL_CATEGORIES];
       this.mockProducts = [...INITIAL_PRODUCTS];
       this.mockReviews = [...INITIAL_REVIEWS];
+    }
+  }
+
+  private async loadFullMappedItemList() {
+    try {
+      const res = await fetch('/itemlist_mapped.json');
+      if (res.ok) {
+        const mapped: Product[] = await res.json();
+        this.mockProducts = mapped.slice(0, 250);
+        this.saveMockData();
+      } else {
+        this.mockProducts = [...INITIAL_PRODUCTS];
+      }
+    } catch {
+      this.mockProducts = [...INITIAL_PRODUCTS];
     }
   }
 
@@ -361,7 +385,7 @@ export class SupabaseService {
 
   // ─── Products ──────────────────────────────────────────────────────────────
   async getProducts(opts?: { categoryId?: string; featured?: boolean; limit?: number; offset?: number; search?: string }): Promise<Product[]> {
-    if (!this.isMockMode && this.supabase) {
+    if (this.supabase) {
       try {
         let query = this.supabase.from('products').select('*, category:categories(name, slug)').eq('is_active', true).order('created_at', { ascending: false });
         if (opts?.categoryId) query = query.eq('category_id', opts.categoryId);
@@ -391,7 +415,7 @@ export class SupabaseService {
   }
 
   async getProductBySlug(slug: string): Promise<Product | null> {
-    if (!this.isMockMode && this.supabase) {
+    if (this.supabase) {
       try {
         const { data } = await this.supabase.from('products').select('*, category:categories(name, slug)').eq('slug', slug).eq('is_active', true).single();
         if (data) return data;
@@ -400,10 +424,12 @@ export class SupabaseService {
     return this.mockProducts.find(p => p.slug === slug && p.is_active) || null;
   }
 
-  async getAllProducts(): Promise<Product[]> {
-    if (!this.isMockMode && this.supabase) {
+  async getAllProducts(opts?: { limit?: number; offset?: number }): Promise<Product[]> {
+    if (this.supabase) {
       try {
-        const { data, error } = await this.supabase.from('products').select('*, category:categories(name, slug)').order('created_at', { ascending: false });
+        let query = this.supabase.from('products').select('*, category:categories(name, slug)').order('created_at', { ascending: false });
+        if (opts?.limit) query = query.limit(opts.limit);
+        const { data, error } = await query;
         if (!error && data) return data;
       } catch {}
     }
