@@ -8,218 +8,235 @@ import { CartService } from '../../../core/services/cart.service';
   standalone: true,
   imports: [CurrencyPipe],
   template: `
-    <div class="product-card card">
+    <div class="blinkit-product-card">
       <!-- Discount Badge -->
       @if (discountPercent > 0) {
-        <span class="discount-pill">{{ discountPercent }}% OFF</span>
+        <div class="blinkit-discount-badge">{{ discountPercent }}% OFF</div>
       }
 
       <!-- Image Section -->
-      <div class="card-image-wrap" (click)="openDetail.emit(product)">
-        <img [src]="product.images[0]" [alt]="product.name" loading="lazy" class="card-img" />
+      <div class="blinkit-img-box" (click)="openDetail.emit(product)">
+        <img [src]="product.images[0]" [alt]="product.name" loading="lazy" class="blinkit-img" />
       </div>
 
-      <!-- Content -->
-      <div class="card-body">
-        <!-- Category & Weight Unit -->
-        <div class="card-meta">
-          <span class="card-unit">{{ selectedVariant() }}</span>
+      <!-- Time & Unit Badge -->
+      <div class="blinkit-time-row">
+        <span class="blinkit-time-tag">⏱️ 8 MINS</span>
+        <span class="blinkit-weight-tag">{{ selectedVariant() }}</span>
+      </div>
+
+      <!-- Title -->
+      <h3 class="blinkit-title" (click)="openDetail.emit(product)" [title]="product.name">
+        {{ product.name }}
+      </h3>
+
+      <!-- Variant Select (If multiple sizes) -->
+      @if (product.sizes && product.sizes.length > 1) {
+        <div class="variant-select-wrap">
+          <select class="variant-select" (change)="onVariantChange($event)">
+            @for (size of product.sizes; track size) {
+              <option [value]="size" [selected]="size === selectedVariant()">{{ size }}</option>
+            }
+          </select>
+        </div>
+      }
+
+      <!-- Footer: Price & Add Button -->
+      <div class="blinkit-footer">
+        <div class="blinkit-price-wrap">
+          <span class="blinkit-curr-price">{{ product.price | currency:'INR':'symbol':'1.0-0' }}</span>
+          @if (product.original_price && product.original_price > product.price) {
+            <span class="blinkit-orig-price">{{ product.original_price | currency:'INR':'symbol':'1.0-0' }}</span>
+          }
         </div>
 
-        <h3 class="card-title" (click)="openDetail.emit(product)">{{ product.name }}</h3>
-
-        <!-- Variant Selector if available -->
-        @if (product.sizes && product.sizes.length > 1) {
-          <div class="variant-select-wrap">
-            <select class="variant-select" (change)="onVariantChange($event)">
-              @for (size of product.sizes; track size) {
-                <option [value]="size" [selected]="size === selectedVariant()">{{ size }}</option>
-              }
-            </select>
-          </div>
-        }
-
-        <!-- Price & Quick Add -->
-        <div class="card-footer">
-          <div class="price-box">
-            <span class="current-price">{{ product.price | currency:'INR':'symbol':'1.0-0' }}</span>
-            @if (product.original_price && product.original_price > product.price) {
-              <span class="original-price">{{ product.original_price | currency:'INR':'symbol':'1.0-0' }}</span>
-            }
-          </div>
-
-          <!-- Quick Add / Stepper Button -->
-          <div class="add-box">
-            @if (currentQty() === 0) {
-              <button class="btn-add" (click)="addToCart($event)" id="add-btn-{{product.id}}">
-                <span>+ ADD</span>
-              </button>
-            } @else {
-              <div class="stepper">
-                <button class="step-btn" (click)="decQty($event)">-</button>
-                <span class="step-qty">{{ currentQty() }}</span>
-                <button class="step-btn" (click)="incQty($event)">+</button>
-              </div>
-            }
-          </div>
+        <!-- Blinkit Style Green Add / Stepper Button -->
+        <div class="blinkit-btn-wrap">
+          @if (currentQty() === 0) {
+            <button class="blinkit-add-btn" (click)="addToCart($event)" id="add-btn-{{product.id}}">
+              ADD
+            </button>
+          } @else {
+            <div class="blinkit-stepper">
+              <button class="blinkit-step-btn" (click)="decQty($event)">-</button>
+              <span class="blinkit-step-qty">{{ currentQty() }}</span>
+              <button class="blinkit-step-btn" (click)="incQty($event)">+</button>
+            </div>
+          }
         </div>
       </div>
     </div>
   `,
   styles: [`
-    .product-card {
+    .blinkit-product-card {
       position: relative;
       display: flex;
       flex-direction: column;
       height: 100%;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      transition: all var(--transition-base);
+      background: #ffffff;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 0.75rem;
+      transition: all 200ms ease;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
-    .product-card:hover {
-      box-shadow: var(--shadow-md);
-      border-color: var(--primary-light);
+    .blinkit-product-card:hover {
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      border-color: #0c831f;
     }
-    .discount-pill {
+
+    .blinkit-discount-badge {
       position: absolute;
       top: 8px; left: 8px;
       z-index: 2;
-      background: var(--gradient-fresh);
-      color: #fff;
+      background: #2563eb;
+      color: #ffffff;
       font-size: 0.625rem;
       font-weight: 800;
-      padding: 0.15rem 0.5rem;
-      border-radius: var(--radius-full);
-      box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
     }
-    .card-image-wrap {
-      aspect-ratio: 1 / 1;
+
+    .blinkit-img-box {
       width: 100%;
-      background: #F8FAFC;
-      overflow: hidden;
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      padding: 0.75rem;
-    }
-    .card-img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform var(--transition-base);
-    }
-    .product-card:hover .card-img {
-      transform: scale(1.04);
-    }
-    .card-body {
-      padding: 0.625rem 0.75rem 0.75rem;
+      height: 130px;
       display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 0.35rem;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
     }
-    .card-meta {
+    .blinkit-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 200ms ease;
+    }
+    .blinkit-product-card:hover .blinkit-img {
+      transform: scale(1.05);
+    }
+
+    .blinkit-time-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 0.25rem;
+      margin-bottom: 0.35rem;
     }
-    .card-unit {
+    .blinkit-time-tag {
+      font-size: 0.625rem;
+      font-weight: 800;
+      color: #666666;
+      background: #f4f4f5;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .blinkit-weight-tag {
       font-size: 0.6875rem;
-      font-weight: 700;
-      color: var(--primary);
-      background: rgba(37, 99, 235, 0.08);
-      padding: 0.12rem 0.45rem;
-      border-radius: var(--radius-xs);
+      color: #666666;
+      font-weight: 600;
     }
-    .card-title {
-      font-family: var(--font-heading);
-      font-size: 0.875rem;
+
+    .blinkit-title {
+      font-family: inherit;
+      font-size: 0.8125rem;
       font-weight: 700;
-      color: var(--text-dark);
-      line-height: 1.25;
+      color: #1f1f1f;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
       cursor: pointer;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      min-height: 2.2rem;
+      min-height: 2.1rem;
     }
+
     .variant-select-wrap {
-      margin-top: 0.1rem;
+      margin-bottom: 0.5rem;
     }
     .variant-select {
       width: 100%;
-      padding: 0.2rem 0.35rem;
+      padding: 2px 4px;
       font-size: 0.6875rem;
-      border-radius: var(--radius-xs);
-      border: 1px solid var(--border);
-      background: var(--bg-warm);
-      color: var(--text-mid);
+      border-radius: 4px;
+      border: 1px solid #e8e8e8;
+      background: #fafafa;
     }
-    .card-footer {
+
+    .blinkit-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-top: auto;
       padding-top: 0.35rem;
-      gap: 0.25rem;
     }
-    .price-box {
+
+    .blinkit-price-wrap {
       display: flex;
       flex-direction: column;
       line-height: 1.1;
     }
-    .current-price {
-      font-family: var(--font-heading);
-      font-size: 0.9375rem;
-      font-weight: 800;
-      color: var(--text-dark);
-    }
-    .original-price {
-      font-size: 0.6875rem;
-      color: var(--text-muted);
-      text-decoration: line-through;
-    }
-    .btn-add {
-      background: rgba(37, 99, 235, 0.08);
-      color: var(--primary);
-      border: 1.5px solid var(--primary);
-      padding: 0.3rem 0.65rem;
-      border-radius: var(--radius-sm);
-      font-size: 0.75rem;
-      font-weight: 800;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all var(--transition-fast);
-    }
-    .btn-add:hover {
-      background: var(--primary);
-      color: #fff;
-    }
-    .stepper {
-      display: flex;
-      align-items: center;
-      background: var(--primary);
-      color: #fff;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
-    }
-    .step-btn {
-      background: none;
-      border: none;
-      color: #fff;
-      width: 24px; height: 24px;
+    .blinkit-curr-price {
       font-size: 0.875rem;
       font-weight: 800;
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
+      color: #1f1f1f;
     }
-    .step-qty {
+    .blinkit-orig-price {
+      font-size: 0.6875rem;
+      color: #888888;
+      text-decoration: line-through;
+    }
+
+    /* Blinkit Signature Green ADD Button */
+    .blinkit-add-btn {
+      background: #f7fff9;
+      color: #0c831f;
+      border: 1px solid #0c831f;
+      padding: 5px 18px;
+      border-radius: 6px;
       font-size: 0.75rem;
       font-weight: 800;
-      padding-inline: 0.25rem;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: all 150ms ease;
+    }
+    .blinkit-add-btn:hover {
+      background: #0c831f;
+      color: #ffffff;
+    }
+
+    .blinkit-stepper {
+      display: flex;
+      align-items: center;
+      background: #0c831f;
+      color: #ffffff;
+      border-radius: 6px;
+      overflow: hidden;
+      height: 28px;
+    }
+    .blinkit-step-btn {
+      background: none;
+      border: none;
+      color: #ffffff;
+      width: 24px;
+      height: 100%;
+      font-size: 0.9375rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .blinkit-step-btn:hover {
+      background: rgba(0,0,0,0.15);
+    }
+    .blinkit-step-qty {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding-inline: 4px;
     }
   `]
 })

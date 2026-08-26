@@ -12,7 +12,7 @@ import { CartDrawerComponent } from '../cart-drawer/cart-drawer.component';
       <nav class="navbar" [class.scrolled]="scrolled()">
         <div class="navbar-inner">
           <!-- Brand Logo -->
-          <a routerLink="/" class="navbar-logo" aria-label="KSM Home">
+          <a routerLink="/catalog" class="navbar-logo" aria-label="KSM Catalog">
             <div class="logo-box">
               <span class="logo-icon">🛒</span>
               <div class="logo-text">
@@ -22,12 +22,10 @@ import { CartDrawerComponent } from '../cart-drawer/cart-drawer.component';
             </div>
           </a>
 
-          
-
           <!-- Navigation Links (Desktop) -->
           <ul class="navbar-links hide-mobile">
-            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
             <li><a routerLink="/catalog" routerLinkActive="active">Store Catalog</a></li>
+            <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
             <li><a routerLink="/offers" routerLinkActive="active" class="offers-link">🏷️ Special Offers</a></li>
             <li><a routerLink="/about" routerLinkActive="active">About KSM</a></li>
             <li><a routerLink="/reviews" routerLinkActive="active">Reviews</a></li>

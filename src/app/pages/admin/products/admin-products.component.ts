@@ -6,6 +6,35 @@ import { SupabaseService } from '../../../core/services/supabase.service';
 import { Product } from '../../../core/models/product.model';
 import { Category } from '../../../core/models/category.model';
 
+const CATEGORY_MAP = [
+  { id: "cat-1", name: "Fresh Fruits & Veggies", slug: "fruits-veggies", keywords: ["FRUIT", "VEG", "BANANA", "APPLE", "MANGO", "ONION", "POTATO", "TOMATO"] },
+  { id: "cat-2", name: "Atta, Rice & Dal", slug: "atta-rice-dal", keywords: ["AATA", "ATT", "RICE", "DAL", "PULSE", "SUJI", "BESAN", "MAIDA", "OATS", "POHA", "SOOJI"] },
+  { id: "cat-3", name: "Oil, Ghee & Spices", slug: "oil-ghee-spices", keywords: ["OIL", "GHEE", "MASALA", "HALDI", "MIRCH", "DHANIA", "JEERA", "MUSTARD", "SPICE", "SALT", "SUGAR"] },
+  { id: "cat-4", name: "Dairy, Milk & Bakery", slug: "dairy-bakery", keywords: ["MILK", "BUTTER", "CHEESE", "PANEER", "CURD", "BREAD", "DAIRY", "YOGURT", "AMUL"] },
+  { id: "cat-5", name: "Snacks, Biscuits & Drinks", slug: "snacks-drinks", keywords: ["BISCUIT", "COOKIES", "CHOCOLATE", "CHIPS", "PAPAD", "MIXTURE", "NAMKEEN", "SWEET", "ICE CREAM", "FOOD", "MAGGI", "NOODLES", "TEA", "COFFEE", "JUICE", "DRINK", "COCA", "PEPSI"] },
+  { id: "cat-6", name: "Household & Cleaning", slug: "household-cleaning", keywords: ["SOAP", "SHAMPOO", "WIPER", "AGARBATI", "DEO", "FACE WASH", "COSMATIC", "NON FOOD", "DETERGENT", "TIDE", "SURF", "CLEAN", "TISSUE", "PADS", "TOOTHPASTE", "BRUSH"] }
+];
+
+const COVER_IMAGES: { [key: string]: string } = {
+  "cat-1": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=80",
+  "cat-2": "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=800&q=80",
+  "cat-3": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=800&q=80",
+  "cat-4": "https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=800&q=80",
+  "cat-5": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=800&q=80",
+  "cat-6": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80"
+};
+
+function getDeterministicUUID(str: string): string {
+  // Simple deterministic UUID generator for web browser
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = (hash << 5) - hash + str.charCodeAt(i);
+    hash |= 0;
+  }
+  const hex = Math.abs(hash).toString(16).padStart(32, '0');
+  return `${hex.slice(0,8)}-${hex.slice(8,12)}-4${hex.slice(13,16)}-a${hex.slice(17,20)}-${hex.slice(20,32)}`;
+}
+
 @Component({
   selector: 'app-admin-products',
   standalone: true,
@@ -31,7 +60,7 @@ import { Category } from '../../../core/models/category.model';
 
         @if (importStatus()) {
           <div class="import-status-banner">
-            <span>🎉 {{ importStatus() }}</span>
+            <span>{{ importStatus() }}</span>
           </div>
         }
 
@@ -51,7 +80,7 @@ import { Category } from '../../../core/models/category.model';
         <!-- Product Table -->
         <div class="table-card glass-panel">
           @if (loading()) {
-            <p class="loading-text">Loading inventory...</p>
+            <p class="loading-text">Loading inventory from Supabase...</p>
           } @else {
             <div class="table-responsive">
               <table class="admin-table">
@@ -185,7 +214,7 @@ import { Category } from '../../../core/models/category.model';
 
           <div class="csv-modal-body">
             <p class="csv-intro">
-              Upload your GoFrugal POS item list export (<code>itemlist.csv</code>). Our parser maps item names, brands, selling prices, MRPs, and updates your Supabase database automatically!
+              Upload your GoFrugal POS item list export (<code>itemlist.csv</code>). Our parser maps item names, brands, selling prices, MRPs, and batch uploads items directly into your Supabase database!
             </p>
 
             <div class="file-drop-area">
@@ -267,6 +296,7 @@ export class AdminProductsComponent implements OnInit {
   loading = signal(true);
   saving = signal(false);
   deletingBulk = signal(false);
+  importing = signal(false);
   importStatus = signal('');
 
   showModal = signal(false);
@@ -421,9 +451,228 @@ export class AdminProductsComponent implements OnInit {
     }
   }
 
+  // ─── Real Client-Side GoFrugal CSV Parser & Supabase Bulk Uploader ───────────
   async onCsvFileSelected(event: any) {
     const file = event.target.files[0];
     if (!file) return;
+
     this.showCsvModal.set(false);
+    this.importing.set(true);
+    this.importStatus.set(`Reading ${file.name}...`);
+
+    const reader = new FileReader();
+    reader.onload = async (e: any) => {
+      try {
+        const text: string = e.target.result;
+        const lines = text.split(/\r?\n/);
+        this.importStatus.set(`Parsing ${lines.length} lines from CSV...`);
+
+        const catMap = new Map<string, string>();
+        this.categories().forEach(c => catMap.set(c.slug, c.id));
+        const defaultCatId = this.categories()[0]?.id || '';
+
+        const parsedProducts: any[] = [];
+        const seenNames = new Set<string>();
+
+        const headerLine = lines[0].toLowerCase();
+        const isGrofersFormat = headerLine.includes('product id') || (headerLine.includes('image url') && headerLine.includes('deeplink'));
+        const isBlinkItFormat = !isGrofersFormat && headerLine.includes('name') && (headerLine.includes('offer_price') || headerLine.includes('search_query'));
+
+        if (isGrofersFormat) {
+          // Format 3: Product ID, Platform, Name, Brand, MRP, Category, Subcategory, Quantity, Updated at, Image URL, Deeplink
+          for (let i = 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (!line) continue;
+            const matches = line.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g) || [];
+            const fields = matches.map(m => m.replace(/^"|"$/g, '').trim());
+            if (fields.length < 5) continue;
+
+            const prodId = fields[0];
+            const name = fields[2];
+            const brand = fields[3] || 'Grocery';
+            const mrp = parseFloat(fields[4]);
+            const catName = fields[5] || '';
+            const qty = fields[7] || '1 Pack';
+            const imgUrl = fields[9] || '';
+
+            if (!name || isNaN(mrp) || mrp <= 0) continue;
+
+            let matchedCat = CATEGORY_MAP.find(c => c.keywords.some(k => (name + ' ' + brand + ' ' + catName).toUpperCase().includes(k))) || CATEGORY_MAP[4];
+            const lowerText = (catName + ' ' + name).toLowerCase();
+            if (lowerText.includes('milk') || lowerText.includes('bread') || lowerText.includes('paneer') || lowerText.includes('butter') || lowerText.includes('dairy')) matchedCat = CATEGORY_MAP[3];
+            if (lowerText.includes('rice') || lowerText.includes('dal') || lowerText.includes('flour') || lowerText.includes('atta')) matchedCat = CATEGORY_MAP[1];
+            if (lowerText.includes('oil') || lowerText.includes('ghee') || lowerText.includes('spice') || lowerText.includes('masala')) matchedCat = CATEGORY_MAP[2];
+            if (lowerText.includes('shampoo') || lowerText.includes('soap') || lowerText.includes('cleaning') || lowerText.includes('personal')) matchedCat = CATEGORY_MAP[5];
+
+            const slug = (name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '-' + prodId);
+            const catId = catMap.get(matchedCat.slug) || defaultCatId;
+
+            parsedProducts.push({
+              id: getDeterministicUUID(prodId || slug),
+              name,
+              slug,
+              description: `${name} by ${brand} (${qty}). Fresh grocery product from KSM Jabalpur.`,
+              price: mrp,
+              original_price: Math.round(mrp * 1.15),
+              images: [imgUrl || COVER_IMAGES[matchedCat.id] || COVER_IMAGES['cat-5']],
+              category_id: catId,
+              unit: qty,
+              sizes: [qty],
+              tags: ['KSM Direct', brand, catName],
+              is_active: true,
+              is_featured: false,
+              created_at: new Date().toISOString()
+            });
+          }
+        } else if (isBlinkItFormat) {
+          const headers = lines[0].split(',').map(s => s.trim().toLowerCase().replace(/^"|"$/g, ''));
+          const idxName = headers.indexOf('name');
+          const idxBrand = headers.indexOf('brand');
+          const idxMrp = headers.indexOf('mrp');
+          const idxOffer = headers.indexOf('offer_price');
+          const idxQty = headers.indexOf('quantity');
+          const idxQuery = headers.indexOf('search_query');
+
+          for (let i = 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (!line) continue;
+            const parts = line.split(',').map(s => s.trim().replace(/^"|"$/g, ''));
+            if (parts.length <= Math.max(idxName, idxOffer)) continue;
+
+            const name = parts[idxName];
+            const brand = parts[idxBrand] || 'Grocery';
+            const mrp = parseFloat(parts[idxMrp]);
+            const selling = parseFloat(parts[idxOffer]);
+            const qty = parts[idxQty] || '1 Pack';
+            const q = (parts[idxQuery] || '').toLowerCase();
+
+            if (!name || isNaN(selling) || selling <= 0) continue;
+
+            let matchedCat = CATEGORY_MAP.find(c => c.keywords.some(k => (name + ' ' + brand + ' ' + q).toUpperCase().includes(k))) || CATEGORY_MAP[4];
+            if (q.includes('milk') || q.includes('bread') || q.includes('paneer') || q.includes('butter') || q.includes('egg')) matchedCat = CATEGORY_MAP[3];
+            if (q.includes('rice') || q.includes('dal') || q.includes('sugar')) matchedCat = CATEGORY_MAP[1];
+            if (q.includes('ghee') || q.includes('oil')) matchedCat = CATEGORY_MAP[2];
+            if (q.includes('shampoo') || q.includes('soap') || q.includes('detergent') || q.includes('toothpaste')) matchedCat = CATEGORY_MAP[5];
+
+            const slug = (name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '-' + i);
+            const catId = catMap.get(matchedCat.slug) || defaultCatId;
+
+            parsedProducts.push({
+              id: getDeterministicUUID(slug),
+              name,
+              slug,
+              description: `${name} by ${brand} (${qty}). Fresh grocery item from KSM Jabalpur.`,
+              price: selling,
+              original_price: (!isNaN(mrp) && mrp > selling) ? mrp : Math.round(selling * 1.1),
+              images: [COVER_IMAGES[matchedCat.id] || COVER_IMAGES['cat-5']],
+              category_id: catId,
+              unit: qty,
+              sizes: [qty],
+              tags: ['KSM Direct', brand, q],
+              is_active: true,
+              is_featured: false,
+              created_at: new Date().toISOString()
+            });
+          }
+        } else {
+          // GoFrugal POS Export Parser
+          for (let i = 0; i < lines.length; i++) {
+            if (i <= 5) continue; // Skip GoFrugal headers
+            const line = lines[i].trim();
+            if (!line) continue;
+
+            const parts = line.split(',').map(s => s.trim().replace(/^"|"$/g, ''));
+            if (parts.length < 10) continue;
+
+            const brand = parts[1] || '';
+            const itemCode = parts[2];
+            let name = parts[3];
+            const selling = parseFloat(parts[9]);
+            const mrp = parseFloat(parts[10]);
+
+            if (!name || name.includes('..........') || name.includes('SAMPLE') || isNaN(selling) || selling <= 0) continue;
+
+            name = name.replace(/\s+/g, ' ').trim();
+            const lowerName = name.toLowerCase();
+            if (seenNames.has(lowerName)) continue;
+            seenNames.add(lowerName);
+
+            const textToMatch = (brand + ' ' + name).toUpperCase();
+            let matchedCat = CATEGORY_MAP.find(c => c.keywords.some(k => textToMatch.includes(k)));
+            if (!matchedCat) matchedCat = CATEGORY_MAP[4];
+
+            const slug = (name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '-' + itemCode);
+            const catId = catMap.get(matchedCat.slug) || defaultCatId;
+
+            parsedProducts.push({
+              id: getDeterministicUUID(itemCode || slug),
+              name: name,
+              slug: slug,
+              description: `${name} — Genuine store product from Khandelwal Supermart (KSM), Jabalpur.`,
+              price: selling,
+              original_price: (!isNaN(mrp) && mrp > selling) ? mrp : Math.round(selling * 1.1),
+              images: [COVER_IMAGES[matchedCat.id] || COVER_IMAGES['cat-5']],
+              category_id: catId,
+              unit: '1 Pack',
+              sizes: ['Standard Pack'],
+              tags: ['KSM Direct', brand !== '0' ? brand : 'Grocery'],
+              is_active: true,
+              is_featured: false,
+              created_at: new Date().toISOString()
+            });
+          }
+        }
+
+        // Deduplicate items by id and slug to prevent ON CONFLICT DO UPDATE error 21000
+        const uniqueMap = new Map<string, any>();
+        parsedProducts.forEach(p => {
+          if (!uniqueMap.has(p.id) && !uniqueMap.has(p.slug)) {
+            uniqueMap.set(p.id, p);
+            uniqueMap.set(p.slug, p);
+          }
+        });
+        const finalProducts = Array.from(new Set(uniqueMap.values()));
+
+        if (finalProducts.length === 0) {
+          this.importStatus.set('❌ No valid unique products found in CSV file.');
+          this.importing.set(false);
+          return;
+        }
+
+        this.importStatus.set(`Found ${finalProducts.length} unique items. Uploading to Supabase...`);
+
+        // Batch upload into Supabase in chunks of 250
+        const CHUNK_SIZE = 250;
+        const totalChunks = Math.ceil(finalProducts.length / CHUNK_SIZE);
+        let uploaded = 0;
+
+        for (let c = 0; c < totalChunks; c++) {
+          const chunk = finalProducts.slice(c * CHUNK_SIZE, (c + 1) * CHUNK_SIZE);
+          try {
+            await this.supabase.upsertProductsBatch(chunk);
+            uploaded += chunk.length;
+            this.importStatus.set(`⏳ Uploading to Supabase... (${uploaded} / ${finalProducts.length} items uploaded)`);
+          } catch (err) {
+            console.error(`Chunk ${c + 1} failed, retrying item by item:`, err);
+            // Fallback: Upload item by item for this chunk to skip any problematic row
+            for (const item of chunk) {
+              try {
+                await this.supabase.upsertProductsBatch([item]);
+                uploaded++;
+              } catch {}
+            }
+          }
+        }
+
+        this.importStatus.set(`🎉 Successfully uploaded ${uploaded} items into Supabase!`);
+        await this.loadData();
+      } catch (err: any) {
+        this.importStatus.set(`❌ Error parsing CSV: ${err?.message || 'Invalid format'}`);
+      } finally {
+        this.importing.set(false);
+      }
+    };
+
+    reader.readAsText(file);
   }
 }

@@ -1,6 +1,4 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
-import { CurrencyPipe } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { SeoService } from '../../core/services/seo.service';
 import { CartService, SAMPLE_OFFERS } from '../../core/services/cart.service';
 import { Offer } from '../../core/models/offer.model';
@@ -8,7 +6,6 @@ import { Offer } from '../../core/models/offer.model';
 @Component({
   selector: 'app-offers',
   standalone: true,
-  imports: [CurrencyPipe, RouterLink],
   template: `
     <div class="offers-page">
       <!-- Header -->

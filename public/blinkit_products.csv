@@ -1,0 +1,615 @@
+name,brand,mrp,offer_price,quantity,rating,rating_count,available,search_query,rank,discount_percent,platform
+Gold Full Cream Milk,Amul,34,34,500 ml,4.670000076293945,14.0,True,milk,1,0.0,BlinkIt
+Toned Milk,Nandini,24,24,500 ml,4.570000171661377,1.0,True,milk,2,0.0,BlinkIt
+Shubham Pasteurised Standardized Toned Milk,Nandini,27,27,500 ml,4.510000228881836,11.0,True,milk,3,0.0,BlinkIt
+Daily Health Toned Milk,Heritage,27,27,500 ml,4.599999904632568,93105.0,True,milk,4,0.0,BlinkIt
+A2 Cow Milk (Pasteurized),Akshayakalpa Organic,47,47,500 ml,4.519999980926514,6341.0,True,milk,5,0.0,BlinkIt
+Amrutha Organic Farm Fresh A2 Milk,Akshayakalpa Organic,53,53,500 ml,4.630000114440918,6199.0,True,milk,6,0.0,BlinkIt
+Cow Milk (Pasteurized),Akshayakalpa Organic,45,45,500 ml,4.53000020980835,5160.0,True,milk,7,0.0,BlinkIt
+Lactose Free Milk,Amul,26,26,250 ml,4.710000038146973,72943.0,True,milk,8,0.0,BlinkIt
+Farm Fresh Cow Milk,Akshayakalpa Organic,47,47,500 ml,4.639999866485596,1848.0,True,milk,9,0.0,BlinkIt
+Taaza Toned Milk,Amul,29,29,500 ml,4.619999885559082,85.0,True,milk,11,0.0,BlinkIt
+Taaza Toned Milk - Pack of 2,Amul,34,34,2 x 200 ml,4.679999828338623,15.0,True,milk,12,0.0,BlinkIt
+Slim 'n' Trim Skimmed Milk (Zero Cholesterol),Amul,85,85,1 ltr,4.659999847412109,18982.0,True,milk,13,0.0,BlinkIt
+Cow Milk,Akshayakalpa Organic,135,135,1 ltr,4.610000133514404,1457.0,True,milk,14,0.0,BlinkIt
+Gold Milk,Amul,83,83,1 ltr,4.710000038146973,86983.0,True,milk,15,0.0,BlinkIt
+Buffalo A2 Milk,Sids Farm,60,60,500 ml,4.190000057220459,10134.0,True,milk,16,0.0,BlinkIt
+Slim Skimmed Milk,Nandini,73,73,1 ltr,4.699999809265137,2893.0,True,milk,17,0.0,BlinkIt
+High Protein Cow Milk,Akshayakalpa Organic,100,95,250 ml,3.8299999237060547,293.0,True,milk,19,5.0,BlinkIt
+Full Cream Milk,Arokya,36,36,500 ml,4.650000095367432,28940.0,True,milk,20,0.0,BlinkIt
+Special Long Life Milk (90 Days Shelf Life),Heritage,29,28,450 ml,4.619999885559082,24253.0,True,milk,21,3.4,BlinkIt
+Slim Milk,Akshayakalpa Organic,145,145,1 ltr,4.5,346.0,True,milk,22,0.0,BlinkIt
+Nourish+ Toned Milk,Heritage,30,29,500 ml,4.309999942779541,961.0,True,milk,23,3.3,BlinkIt
+N Pro High Protein Milk,Nandini,27,27,500 ml,4.349999904632568,1030.0,True,milk,27,0.0,BlinkIt
+Calci+ Calcium Rich High Protein Milk,Amul,26,26,250 ml,4.46999979019165,6347.0,True,milk,28,0.0,BlinkIt
+FIT Life Homogenized Double Toned Milk (450 ml),Mother Dairy,32,32,450 ml,4.480000019073486,20610.0,True,milk,29,0.0,BlinkIt
+Ready to Feed Infant Formula,Amulspray,25,25,250 ml,4.25,588.0,True,milk,33,0.0,BlinkIt
+Light Probiotic Drink,Yakult,100,100,5 x 65 ml,4.679999828338623,13933.0,True,milk,35,0.0,BlinkIt
+Light Mango Probiotic Fermented Milk Drink,Yakult,100,100,5 x 65 ml,4.630000114440918,6311.0,True,milk,36,0.0,BlinkIt
+Zero Maida 100% Whole Wheat Bread,English Oven,65,65,400 g,4.440000057220459,15629.0,True,bread,1,0.0,BlinkIt
+Milk Bread,Britannia,60,60,400 g,4.489999771118164,45870.0,True,bread,2,0.0,BlinkIt
+100% Whole Wheat Bread (Zero Maida),Modern,65,65,400 g,4.550000190734863,65991.0,True,bread,3,0.0,BlinkIt
+Zero Maida Whole Wheat Bread,The Health Factory,55,55,250 g,4.409999847412109,85422.0,True,bread,4,0.0,BlinkIt
+White Bread,Modern,60,60,400 g,4.460000038146973,42010.0,True,bread,6,0.0,BlinkIt
+100% Whole Wheat Bread (No Maida),Britannia,65,65,400 g,4.510000228881836,53869.0,True,bread,7,0.0,BlinkIt
+Sandwich White Bread,English Oven,55,55,400 g,4.420000076293945,35618.0,True,bread,8,0.0,BlinkIt
+Super Protein Bread,The Health Factory,95,87,250 g,3.549999952316284,628.0,True,bread,9,8.4,BlinkIt
+Whole Wheat Sourdough,Brik Oven,110,110,400 g,4.150000095367432,496.0,True,bread,10,0.0,BlinkIt
+Zero Maida Milk Bread,The Health Factory,65,65,250 g,4.260000228881836,9200.0,True,bread,11,0.0,BlinkIt
+Zero Preservatives Whole Wheat Bread,Baker's Loaf,85,77,350 g,4.329999923706055,878.0,True,bread,12,9.4,BlinkIt
+Zero Maida Multigrain Bread,English Oven,70,65,400 g,4.550000190734863,46685.0,True,bread,13,7.1,BlinkIt
+Brown Bread,English Oven,60,60,400 g,4.570000171661377,62873.0,True,bread,14,0.0,BlinkIt
+Premium White Bread 350 g,English Oven,45,45,350 g,4.539999961853027,71506.0,True,bread,15,0.0,BlinkIt
+High Protein Bread,Baker's Loaf,95,86,350 g,4.489999771118164,903.0,True,bread,16,9.5,BlinkIt
+Milk Plus Milk Bread,Modern,55,55,350 g,4.369999885559082,2965.0,True,bread,17,0.0,BlinkIt
+Multigrain Double Protein Bread (64g Protein per Loaf),Protein Chef,99,99,270 g,4.25,7282.0,True,bread,18,0.0,BlinkIt
+Country Sourdough (Zero Maida),The Baker's Dozen,159,145,330 g,3.9700000286102295,3930.0,True,bread,19,8.8,BlinkIt
+Breakfast Slice White Bread,Britannia,60,60,450 g,4.519999980926514,39548.0,True,bread,20,0.0,BlinkIt
+42g Protein Multigrain Bread - 5 Superfoods,Protein Chef,75,75,270 g,4.25,9503.0,True,bread,21,0.0,BlinkIt
+Zero Maida Protein Bread,The Health Factory,85,85,250 g,4.300000190734863,12951.0,True,bread,22,0.0,BlinkIt
+Special Milk Bread,Iyengars Bakery,72,72,400 g,4.510000228881836,939.0,True,bread,23,0.0,BlinkIt
+50g High Protein Bread (Multigrain),Protein Chef,85,85,270 g,4.0,540.0,True,bread,27,0.0,BlinkIt
+Low GI Multigrain Bread,The Health Factory,80,80,250 g,4.320000171661377,1754.0,True,bread,28,0.0,BlinkIt
+Sourdough Whole Wheat Bread,The Baker's Dozen,70,70,400 g,4.230000019073486,11985.0,True,bread,29,0.0,BlinkIt
+Fruit Bread,English Oven,25,25,150 g,4.260000228881836,1304.0,True,bread,30,0.0,BlinkIt
+Garlic Bread,English Oven,38,38,200 g,4.360000133514404,7077.0,True,bread,31,0.0,BlinkIt
+Sourdough Focaccia,The Health Factory,80,80,160 g,4.28000020980835,5579.0,True,bread,32,0.0,BlinkIt
+Fourgrains Sourdough Bread (Zero Maida),The Baker's Dozen,235,214,380 g,4.019999980926514,1784.0,True,bread,33,8.9,BlinkIt
+Hi-Fiber Brown Bread,Modern,65,65,400 g,4.559999942779541,24009.0,True,bread,34,0.0,BlinkIt
+Multigrain Bread,Modern,70,70,400 g,4.519999980926514,18784.0,True,bread,35,0.0,BlinkIt
+Whole Wheat Bread (Zero Maida),Naturbaked,60,55,300 g,4.369999885559082,1856.0,True,bread,36,8.3,BlinkIt
+Delight Basmati Rice - Superior Flavour Absorption (Long Grain),Daawat,130,126,1 kg,4.900000095367432,43.0,True,rice,1,3.1,BlinkIt
+Rozana-Super Basmati Rice (Medium Grain) (Basmati Akki),Daawat,100,95,1 kg,4.389999866485596,57522.0,True,rice,2,5.0,BlinkIt
+Super Vada - Kolam Rice (Long Grain) (Kolam Akki),GTS,625,461,5 kg,4.739999771118164,3247.0,True,rice,3,26.2,BlinkIt
+Pulav Basmati Rice (Long Grain) (Basmati Akki),India Gate,165,138,1 kg,4.71999979019165,2265.0,True,rice,4,16.4,BlinkIt
+Steam Sonamasuri Rice (Extra Long Grain) (Sonamasuri Akki),Royal Bullet,2600,1399,26 kg,4.260000228881836,8369.0,True,rice,5,46.2,BlinkIt
+Rozana Super Basmati Rice (Medium Grain) (Basmati Akki),Daawat,499,385,5 kg,4.570000171661377,38514.0,True,rice,6,22.8,BlinkIt
+Super Basmati Rice (Extra Long Grain) (Basmati Akki),India Gate,1082,836,5 kg,4.71999979019165,6251.0,True,rice,7,22.7,BlinkIt
+Dubar Basmati Rice (Long Grain) (Dubar Basmati Akki),India Gate,167,135,1 kg,4.71999979019165,16581.0,True,rice,8,19.2,BlinkIt
+Sona Masoori/ Sonamasuri Rice (Medium Grain) (Sonamasuri Akki),Daawat,95,80,1 kg,4.590000152587891,2812.0,True,rice,9,15.8,BlinkIt
+Classic Gold Standard Basmati Rice (Extra Long Grain) (Basmati Akki),India Gate,273,251,1 kg,4.739999771118164,7163.0,True,rice,10,8.1,BlinkIt
+Everyday Basmati Rice (Medium Grain) (Basmati Akki),India Gate,104,92,1 kg,4.320000171661377,31406.0,True,rice,11,11.5,BlinkIt
+Rozana-Gold Basmati Rice (Long Grain) (Basmati Akki),Fortune,120,96,1 kg,4.489999771118164,37543.0,True,rice,12,20.0,BlinkIt
+Super Basmati Rice (1 kg + 500 g) (Extra Long Grain) (Basmati Akki),India Gate,280,259,1.5 kg,4.75,10125.0,True,rice,13,7.5,BlinkIt
+Biryani Rice (Extra Long Grain) (Basmati Akki),Daawat,260,239,1 kg,4.710000038146973,9939.0,True,rice,14,8.1,BlinkIt
+Jeera Rice (Jeerige Akki),India Gate,345,237,1 kg,4.739999771118164,4194.0,True,rice,15,31.3,BlinkIt
+Rozzana Lite Basmati Rice (Medium Grain) (Basmati Akki),India Gate,540,398,5 kg,4.559999942779541,1823.0,True,rice,16,26.3,BlinkIt
+Tamil Boiled Ponni Rice (Medium Grain) (Ponni Akki),Popular Essentials,550,455,5 kg,4.889999866485596,151.0,True,rice,17,17.3,BlinkIt
+Daily Premium Basmati Rice (Long Grain) (Basmati Akki),India Gate,680,528,5 kg,4.619999885559082,7847.0,True,rice,19,22.4,BlinkIt
+Vadi Matta Rice (Long Grain),Matta Naad,589,399,5 kg,4.75,41.0,True,rice,21,32.3,BlinkIt
+Palakkadan Matta Rice (Matta Akki),Double Horse,180,166,2 kg,4.590000152587891,603.0,True,rice,23,7.8,BlinkIt
+"Raw Sonamasuri Rice (24 Months, Medium Grain) (Sonamasuri Akki)",India Gate,2225,1499,26 kg,4.429999828338623,1589.0,True,rice,24,32.6,BlinkIt
+Uplife Lite Everyday Rice,India Gate,99,99,1 kg,4.619999885559082,78.0,True,rice,25,0.0,BlinkIt
+Feast Rozana Basmati Rice (Medium Grain) (Basmati Akki),India Gate,620,505,5 kg,4.710000038146973,11403.0,True,rice,26,18.5,BlinkIt
+Classic Raw Sonamasuri Rice (Medium Grain) (Sonamasuri Akki),Popular Essentials,550,423,5 kg,4.429999828338623,160.0,True,rice,27,23.1,BlinkIt
+Palakkadan Short Grain Matta Rice (Matta Akki),Double Horse,420,398,5 kg,4.639999866485596,338.0,True,rice,28,5.2,BlinkIt
+Raw Sonamasuri Rice (Medium Grain) (Sonamasuri Akki),Daawat,470,365,5 kg,4.5,3113.0,True,rice,29,22.3,BlinkIt
+Rozana Gold Basmati Rice Tibar (Medium Grain) (Basmati Akki),Daawat,550,451,5 kg,4.610000133514404,12045.0,True,rice,30,18.0,BlinkIt
+Vadi Matta Rice (Matta Akki),Double Horse,455,393,5 kg,4.550000190734863,1497.0,True,rice,31,13.6,BlinkIt
+Jeerakasala Rice (Akki),Double Horse,319,290,1 kg,4.610000133514404,161.0,True,rice,34,9.1,BlinkIt
+Super Vada Kolam Rice (Long Grain) (Kolam Akki),GTS,1150,896,10 kg,4.559999942779541,1556.0,True,rice,35,22.1,BlinkIt
+Govindo Bhog Rice (1 kg) (Govindo Bhog Akki),India Gate,320,271,1 kg,4.75,4119.0,True,rice,36,15.3,BlinkIt
+30 Max Protein Speciality Eggs,Hen Fruit,455,377,30 pcs,3.700000047683716,22088.0,True,eggs,1,17.1,BlinkIt
+Farm Fresh White Eggs,Nutri Hatch,60,60,6 pcs,4.53000020980835,10377.0,True,eggs,2,0.0,BlinkIt
+White Eggs,Table White,145,109,10 pcs,4.21999979019165,87602.0,True,eggs,3,24.8,BlinkIt
+10 Max Protein Speciality Eggs,Hen Fruit,160,135,10 pcs,3.9700000286102295,25717.0,True,eggs,4,15.6,BlinkIt
+Farm Fresh Classic White Protein Rich Eggs,Licious,84,84,6 pcs,4.03000020980835,22914.0,True,eggs,5,0.0,BlinkIt
+White Eggs - Pack of 30,Jaya,350,301,30 pcs,4.449999809265137,6840.0,True,eggs,6,14.0,BlinkIt
+Nutrition Protein Plus Eggs (10 pieces),Eggoz,165,125,10 pcs,3.7200000286102295,2270.0,True,eggs,7,24.2,BlinkIt
+White Protein Rich Eggs,Licious,167,167,12 pcs,4.039999961853027,8580.0,True,eggs,8,0.0,BlinkIt
+10 Farm Fresh No Antibiotics White Protein Rich Eggs,Hen Fruit,150,130,10 pcs,3.7200000286102295,4349.0,True,eggs,10,13.3,BlinkIt
+Nutrition White Protein Rich Eggs (10 pieces),Eggoz,159,127,10 pcs,4.050000190734863,31332.0,True,eggs,12,20.1,BlinkIt
+30 Farm Fresh No Antibiotics White Protein Rich Eggs,Hen Fruit,425,362,30 pcs,3.559999942779541,7095.0,True,eggs,13,14.8,BlinkIt
+Free Range Eggs,Farm Made,159,154,6 pcs,4.070000171661377,19705.0,True,eggs,14,3.1,BlinkIt
+Nutrition White Protein Rich Eggs (30 pieces),Eggoz,429,346,30 pcs,3.509999990463257,30447.0,True,eggs,15,19.3,BlinkIt
+Healthy White Protein Rich Eggs,UPF,99,90,6 pcs,3.799999952316284,2301.0,True,eggs,16,9.1,BlinkIt
+Nutrition White Protein Rich Eggs (6 pieces),Eggoz,97,84,6 pcs,3.9600000381469727,12280.0,True,eggs,17,13.4,BlinkIt
+Vitamin D3 White Protein Rich Eggs,Abhi,380,301,24 pcs,4.340000152587891,10662.0,True,eggs,18,20.8,BlinkIt
+Brown Eggs,Licious,120,120,6 pcs,3.9600000381469727,7592.0,True,eggs,19,0.0,BlinkIt
+Vitamin D3 White Protein Rich Eggs - 1 pack (6 pieces),Abhi,99,81,6 pcs,4.429999828338623,10066.0,True,eggs,20,18.2,BlinkIt
+Eggs (6 pcs),Table White,85,65,6 pcs,4.190000057220459,65730.0,True,eggs,21,23.5,BlinkIt
+Healthy Brown Eggs - 6 pieces - Pack of 2,UPF,228,204,6 pcs,3.8399999141693115,13859.0,True,eggs,23,10.5,BlinkIt
+Gold+ Brown Eggs,Abhi,190,187,10 pcs,4.349999904632568,11630.0,True,eggs,24,1.6,BlinkIt
+Nutri White Protein Rich Eggs,Suguna Delfrez,192,152,12 pcs,4.5,56.0,True,eggs,25,20.8,BlinkIt
+Premium Fresh White Eggs,dr Good,65,65,6 pcs,4.329999923706055,15877.0,True,eggs,26,0.0,BlinkIt
+Dose White Speciality Eggs,Abhi,125,107,6 pcs,3.8299999237060547,89.0,True,eggs,27,14.4,BlinkIt
+Nutri+ with Immunity Boosters Speciality Eggs,Abhi,89,76,6 pcs,4.449999809265137,2527.0,True,eggs,28,14.6,BlinkIt
+High Omega3 Eggs,dr Good,198,181,12 pcs,4.0,1158.0,True,eggs,30,8.6,BlinkIt
+Plus Speciality Eggs,SKM Best Eggs,96,96,6 pcs,4.349999904632568,632.0,True,eggs,32,0.0,BlinkIt
+Cage Free Brown Eggs,UPF,135,135,6 pcs,3.119999885559082,1083.0,True,eggs,33,0.0,BlinkIt
+Vitamin D Speciality Eggs,Suguna Delfrez,105,82,6 pcs,3.7300000190734863,155.0,True,eggs,34,21.9,BlinkIt
+Heart Speciality Eggs with Omega 3,Suguna Delfrez,100,85,6 pcs,4.099999904632568,45.0,True,eggs,35,15.0,BlinkIt
+10 High Protein Power Brown Eggs,Hen Fruit,195,166,10 pcs,3.6600000858306885,6832.0,True,eggs,36,14.9,BlinkIt
+French Style Butter Cookies,Sunfeast Baked Creations,199,178,112.5 g,4.590000152587891,1020.0,True,butter,1,10.6,BlinkIt
+Salted Butter,Amul,63,63,100 g,4.699999809265137,54.0,True,butter,2,0.0,BlinkIt
+Salted Butter (200 g),Amul,130,130,200 g,4.789999961853027,99461.0,True,butter,3,0.0,BlinkIt
+Garlic & Herbs Butter,Amul,70,70,100 g,4.710000038146973,60273.0,True,butter,4,0.0,BlinkIt
+Creamy Pistachio Butter,Beeza,599,529,200 g,4.389999866485596,69.0,True,butter,5,11.7,BlinkIt
+Unsweetened Almond Butter,The Butternut Co.,450,419,200 g,4.199999809265137,82.0,True,butter,6,6.9,BlinkIt
+Creamy Unsweetened Almond Butter,Jus'Amazin,420,399,200 g,4.260000228881836,32.0,True,butter,7,5.0,BlinkIt
+Cooking Unsalted Butter,Milky Mist,160,154,200 g,4.739999771118164,2797.0,True,butter,8,3.8,BlinkIt
+Salted Butter (500 g),Mother Dairy,295,295,500 g,4.570000171661377,7172.0,True,butter,9,0.0,BlinkIt
+DoodhShakti Probiotic Butter (Tub),Nutralite,309,279,500 g,4.599999904632568,2746.0,True,butter,10,9.7,BlinkIt
+All Natural Crunchy Almond Butter,Pintola,425,395,200 g,4.449999809265137,462.0,True,butter,11,7.1,BlinkIt
+DoodhShakti Probiotic Butter (500 g),Nutralite,290,267,500 g,4.559999942779541,2866.0,True,butter,12,7.9,BlinkIt
+DoodhShakti Probiotic Butter,Nutralite,60,57,100 g,4.670000076293945,5839.0,True,butter,13,5.0,BlinkIt
+Milk Fat Spread,Amul Lite,228,228,500 g,4.599999904632568,9446.0,True,butter,15,0.0,BlinkIt
+Chiplet Salted Butter,Milky Mist,90,90,100 g,4.769999980926514,610.0,True,butter,16,0.0,BlinkIt
+Cholesterol Free Fat Spread,Delicious,105,105,500 g,4.579999923706055,12029.0,True,butter,17,0.0,BlinkIt
+Butter Popcorn - Ready to Eat,Act II,25,25,47 g,4.699999809265137,13.0,True,butter,18,0.0,BlinkIt
+Almond Flour & Cacao Protein Cookies,The Cinnamon Kitchen,199,196,70 g,4.510000228881836,1699.0,True,butter,19,1.5,BlinkIt
+Butter Lover's Popcorn - Microwave,Act II,30,25,30 g,4.480000019073486,16480.0,True,butter,20,16.7,BlinkIt
+Natural Crunch Unsweetened Peanut Butter,Alpino,419,386,1 kg,4.670000076293945,576.0,True,butter,21,7.9,BlinkIt
+Jumbo Butter Popcorn,4700BC,50,50,50 g,4.639999866485596,6776.0,True,butter,22,0.0,BlinkIt
+Butter Vanilla Pound Cake,Theobroma,190,170,180 g,3.7799999713897705,1586.0,True,butter,23,10.5,BlinkIt
+Smooth Milk Shea Butter Body Lotion,Nivea,599,546,400 ml,4.630000114440918,2437.0,True,butter,24,8.8,BlinkIt
+Pure Peanut Butter Powder,MYPB,449,224,230 g,4.519999980926514,31.0,True,butter,25,50.1,BlinkIt
+Crunchy Unsweetened Peanut Butter,The Whole Truth,210,198,325 g,4.489999771118164,1880.0,True,butter,26,5.7,BlinkIt
+High Protein Chocolate Crunchy Peanut Butter Spread,MyFitness,319,278,510 g,4.639999866485596,32869.0,True,butter,27,12.9,BlinkIt
+Movie Theater Butter Microwave Popcorn,Act II,49,49,92 g,4.489999771118164,271.0,True,butter,28,0.0,BlinkIt
+All Natural Creamy Peanut Butter (Unsweetened),Pintola,170,156,350 g,4.510000228881836,7153.0,True,butter,29,8.2,BlinkIt
+Whole Wheat Butter Garlic Toast,The Baker's Dozen,119,119,90 g,4.21999979019165,3411.0,True,butter,30,0.0,BlinkIt
+Naked & Rich Choco Body Butter,MCaffeine,299,223,100 g,4.309999942779541,401.0,True,butter,31,25.4,BlinkIt
+Butter Toffee Caramel Popcorn,4700BC,60,54,60 g,4.5,152.0,True,butter,32,10.0,BlinkIt
+Himalayan Salt Caramel and Butter Popcorn Combo,4700BC,54,49,55 g,4.53000020980835,2669.0,True,butter,33,9.3,BlinkIt
+Chocolate Smooth Peanut Butter,Alpino,469,432,1 kg,4.599999904632568,376.0,True,butter,34,7.9,BlinkIt
+Original Peanut Butter Powder,MYPB,449,224,230 g,4.210000038146973,24.0,True,butter,36,50.1,BlinkIt
+Kettle Chips (Basil Thai) No Palm Oil Snacks,Red Rock Deli,60,51,58 g,4.460000038146973,4717.0,True,chips,1,15.0,BlinkIt
+West Indies Hot n Sweet Chilli Flavour Potato Chips,Lay's,25,25,58 g,4.679999828338623,33.0,True,chips,2,0.0,BlinkIt
+India's Magic Masala Potato Chips,Lay's,25,25,58 g,4.699999809265137,52.0,True,chips,3,0.0,BlinkIt
+Spicy Treat Potato Chips - Buy 2 Get 1 Free,Uncle Chipps,144,96,2 x 80 g + 80 g,4.659999847412109,33923.0,True,chips,4,33.3,BlinkIt
+American Style Cream & Onion Potato Chips,Lay's,25,25,58 g,4.690000057220459,38.0,True,chips,5,0.0,BlinkIt
+Original Style Chilli Potato Chips,Bingo,20,19,43 g,4.690000057220459,56958.0,True,chips,6,5.0,BlinkIt
+Plain Salted Potato Chips - Buy 2 Get 1 Free,Uncle Chipps,144,96,2 x 80 g + 80 g,4.699999809265137,12.0,True,chips,7,33.3,BlinkIt
+Chile Limon Flavour Potato Chips,Lay's,25,25,58 g,4.690000057220459,22.0,True,chips,8,0.0,BlinkIt
+Chicken Chips (Amritsari Achari),DOKi,100,100,30 g,4.019999980926514,126.0,True,chips,9,0.0,BlinkIt
+Classic Salted Flavor Potato Chips - Buy 2 Get 1 Free,Lay's,144,96,2 x 80 g + 80 g,4.650000095367432,11461.0,True,chips,10,33.3,BlinkIt
+Peri Peri Ragi Chips,Snackible,50,38,57 g,4.679999828338623,15532.0,True,chips,11,24.0,BlinkIt
+Sea Salt Chicken Chips,DOKi,100,100,30 g,4.059999942779541,127.0,True,chips,12,0.0,BlinkIt
+India's Magic Masala Potato Chips - Buy 2 Get 1 Free,Lay's,144,96,2 x 80 g + 80 g,4.679999828338623,51438.0,True,chips,13,33.3,BlinkIt
+Classic Salted Potato Chips,Lay's,20,20,51 g,4.699999809265137,17.0,True,chips,14,0.0,BlinkIt
+Kerala Nendran Banana Chips,Sweet Karam Coffee,64,60,65 g,4.610000133514404,22512.0,True,chips,15,6.2,BlinkIt
+American Style Cream & Onion Flavour Potato Chips - Buy 2 Get 1 Free,Lay's,144,96,2 x 80 g + 80 g,4.679999828338623,26167.0,True,chips,16,33.3,BlinkIt
+Healthy High Protein Mix Veggie Chips,Troovy,65,65,70 g,4.639999866485596,12655.0,True,chips,17,0.0,BlinkIt
+Healthy High Protein Ragi Chips,Troovy,65,65,70 g,4.699999809265137,9517.0,True,chips,18,0.0,BlinkIt
+West Indies Hot 'n' Sweet Chilli Potato Chips - Buy 2 Get 1 Free,Lay's,144,96,2 x 80 g + 80 g,4.679999828338623,20358.0,True,chips,19,33.3,BlinkIt
+Multigrain Super Masala Chips,SuperYou,40,40,40 g,4.599999904632568,16661.0,True,chips,20,0.0,BlinkIt
+Makha Shaka Crisps - Masala Stix Healthy Snacks,Farmley,30,29,33 g,4.559999942779541,26299.0,True,chips,21,3.3,BlinkIt
+Bangalore Classic Masala Potato Chips,Adukale,65,46,60 g,4.5,396.0,True,chips,22,29.2,BlinkIt
+Spanish Tomato Tango Flavour Chips,Lay's,25,25,58 g,4.659999847412109,14.0,True,chips,23,0.0,BlinkIt
+Spicy Treat Flavour Potato Chips,Uncle Chipps,20,20,53 g,4.690000057220459,45.0,True,chips,24,0.0,BlinkIt
+Malnad Magic Masala Potato Chips,Adukale,65,46,60 g,4.360000133514404,232.0,True,chips,25,29.2,BlinkIt
+Cheese & Herbs Nachos Chips,Cornitos,60,57,65 g,4.639999866485596,19893.0,True,chips,26,5.0,BlinkIt
+Original Style Chilli Sprinkled Potato Chips,Bingo,50,37,85 g,4.679999828338623,27531.0,True,chips,27,26.0,BlinkIt
+Popped Indian Spice Mix Potato Chips,Bingo,50,33,51.2 g,4.559999942779541,3303.0,True,chips,28,34.0,BlinkIt
+Assorted Chips,The Healthy Binge,160,149,4 x 40 g,4.710000038146973,38.0,True,chips,29,6.9,BlinkIt
+Choco Ragi Puffs,Slurrp Farm,35,35,20 g,4.550000190734863,4849.0,True,chips,30,0.0,BlinkIt
+Popped Salt n Pepper Potato Chips,Bingo,50,33,51.2 g,4.53000020980835,1859.0,True,chips,31,34.0,BlinkIt
+Sizzling Hot Potato Chips,Lay's,20,20,52.9 g,4.610000133514404,93111.0,True,chips,32,0.0,BlinkIt
+Dinamita Fiery Lime And Chilli Snack,Doritos,30,26,65.2 g,4.590000152587891,54621.0,True,chips,33,13.3,BlinkIt
+Potato Popped Chips (Spicy Chipotle Flavour),BRB,40,38,51 g,4.650000095367432,3535.0,True,chips,34,5.0,BlinkIt
+Smoking Hot Bhoot Potato Chips - Spicy Chilli,Too Yumm,55,44,79 g,4.670000076293945,20195.0,True,chips,35,20.0,BlinkIt
+Sour Cream & Onion Potato Chips (40 g),Pringles,55,51,40 g,4.630000114440918,28832.0,True,chips,36,7.3,BlinkIt
+Chewy Choco Chunk Cookies,Sunfeast Baked Creations,450,405,260 g,4.75,21.0,True,biscuits,1,10.0,BlinkIt
+Dark Fantasy Biscuit,Sunfeast Bourbon,30,15,108 g,4.610000133514404,14.0,True,biscuits,2,50.0,BlinkIt
+Digestive High-Fibre Biscuit,Britannia NutriChoice,25,25,125 g,4.710000038146973,97011.0,True,biscuits,3,0.0,BlinkIt
+Nutty Cashew Cookies,Sunfeast Baked Creations,250,225,180 g,4.480000019073486,26.0,True,biscuits,4,10.0,BlinkIt
+Vanilla Sandwich Crème Biscuits,Sunfeast Dark Fantasy,30,14,79 g,4.570000171661377,54700.0,True,biscuits,5,53.3,BlinkIt
+Choco Chip Cookies,Hide & Seek,30,28,100 g,4.699999809265137,16.0,True,biscuits,6,6.7,BlinkIt
+Golden Butter Cookies,Sunfeast Baked Creations,220,198,180 g,4.400000095367432,35.0,True,biscuits,7,10.0,BlinkIt
+Cashew Biscuit,Britannia Good Day,45,45,200 g,4.519999980926514,11.0,True,biscuits,8,0.0,BlinkIt
+Crackers Sweet & Salty Biscuits,Parle Krackjack,35,35,176.4 g,4.659999847412109,81697.0,True,biscuits,9,0.0,BlinkIt
+Biscuit - Cashew & Almond Cookies,Sunfeast Mom's Magic,142,73,544 g,4.590000152587891,14534.0,True,biscuits,10,48.6,BlinkIt
+Desi Ghee Gud Thekua Cookie (No Maida),MomsMade,380,369,400 g,4.070000171661377,2095.0,True,biscuits,11,2.9,BlinkIt
+Gud Atta Biscuit,Jaggic,185,185,400 g,4.590000152587891,2213.0,True,biscuits,12,0.0,BlinkIt
+Digestive High Fibre Biscuit,McVitie's,199,130,959.1 g,4.619999885559082,8492.0,True,biscuits,13,34.7,BlinkIt
+Classic Crunch Biscuit,Britannia Little Hearts,30,21,79 g,4.71999979019165,15.0,True,biscuits,14,30.0,BlinkIt
+Chocolate Chip Cookies,Hide & Seek,60,48,200 g,4.71999979019165,18.0,True,biscuits,15,20.0,BlinkIt
+Cashew Bakery Cookies,Karachi Bakery,240,228,400 g,4.650000095367432,4608.0,True,biscuits,16,5.0,BlinkIt
+Choco Fill Cookies,Sunfeast Dark Fantasy,40,38,69 g,4.710000038146973,11.0,True,biscuits,17,5.0,BlinkIt
+Marie Biscuits,Britannia Marie Gold,40,38,208 g,4.630000114440918,93913.0,True,biscuits,18,5.0,BlinkIt
+Sugar Free Hazelnut & Oat Cookies,Sunfeast Farmlite,100,75,100 g,4.659999847412109,846.0,True,biscuits,19,25.0,BlinkIt
+Milky Sandwich Creme Biscuits,Britannia Milk Bikis,50,46,188 g,4.659999847412109,62005.0,True,biscuits,20,8.0,BlinkIt
+Coconut Biscuit,Britannia Nice Time,25,25,152 g,4.690000057220459,87833.0,True,biscuits,21,0.0,BlinkIt
+Oats & Almonds Cookies,Sunfeast Farmlite,75,63,150 g,4.710000038146973,14877.0,True,biscuits,22,16.0,BlinkIt
+Sandwich Crème Biscuits,Britannia Treat Jim Jam,40,36,150 g,4.679999828338623,1.0,True,biscuits,23,10.0,BlinkIt
+Caramelized Cookies,Lotus Biscoff,30,30,75 g,4.670000076293945,60732.0,True,biscuits,24,0.0,BlinkIt
+Jaggery Ragi Cookies (No Maida/ No Palm Oil),Right Shift,80,72,100 g,4.559999942779541,3267.0,True,biscuits,25,10.0,BlinkIt
+Osmania Chai Bakery Cookies,Karachi Bakery,140,133,400 g,4.590000152587891,17903.0,True,biscuits,27,5.0,BlinkIt
+Butter Jeera Cookies,Britannia Good Day,180,91,487.5 g,4.659999847412109,7882.0,True,biscuits,28,49.4,BlinkIt
+Vita Marie Biscuits,Britannia Marie Gold,30,29,166.8 g,4.610000133514404,33733.0,True,biscuits,29,3.3,BlinkIt
+Cheese Flavoured Cracker Biscuit - Family Pack,Malkist,60,57,150 g,4.739999771118164,58630.0,True,biscuits,30,5.0,BlinkIt
+Cappuccino Flavoured Cracker Biscuit - Family Pack,Malkist,53,48,144 g,4.5,3785.0,True,biscuits,31,9.4,BlinkIt
+Original Gluco Biscuit,Parle-G,100,93,800 g,4.769999980926514,59025.0,True,biscuits,32,7.0,BlinkIt
+Gluten Free Cashew Millet Cookies (No Added Sugar),Lo Foods,265,265,200 g,4.610000133514404,9694.0,True,biscuits,33,0.0,BlinkIt
+Turkish Oats & Hazelnut Cookies,Sunfeast Baked Creations,133,119,120 g,4.480000019073486,1576.0,True,biscuits,34,10.5,BlinkIt
+5 Grain Digestive Biscuit,Britannia NutriChoice,65,54,200 g,4.710000038146973,28984.0,True,biscuits,35,16.9,BlinkIt
+Original Caramelized Cookies,Lotus Biscoff,110,105,225 g,4.75,19267.0,True,biscuits,36,4.5,BlinkIt
+Veg Hakka Noodles,Keya,30,22,150 g,4.260000228881836,698.0,True,noodles,1,26.7,BlinkIt
+"Hakka Noodles with Masala (Not Fried, Air Dried)",Ching's Secret,35,35,140 g,4.590000152587891,28759.0,True,noodles,2,0.0,BlinkIt
+Double Masala Instant Noodles,Maggi,20,20,95 g,4.670000076293945,17.0,True,noodles,3,0.0,BlinkIt
+Egg Hakka Noodles,Keya,30,21,150 g,4.269999980926514,194.0,True,noodles,4,30.0,BlinkIt
+Masala - 2 Minutes Instant Noodles Made With Quality Spices,Maggi,58,58,300 g,4.699999809265137,38.0,True,noodles,5,0.0,BlinkIt
+Magic Masala Instant Noodles with Added Veggies,Yippee,60,56,290.4 g,4.670000076293945,1.0,True,noodles,6,6.7,BlinkIt
+Mood Masala Instant Noodles,Yippee,100,80,290.4 g,4.579999923706055,11835.0,True,noodles,7,20.0,BlinkIt
+2 Minutes Instant Noodles Made With Quality Spices,Maggi,90,79,420 g,4.679999828338623,28154.0,True,noodles,8,12.2,BlinkIt
+Veg Atta Noodles Made with Only Atta Flour,Maggi Nutrilicious,108,101,290 g,4.71999979019165,72494.0,True,noodles,9,6.5,BlinkIt
+Instant Hakka Noodles - Chowmein Sauce Inside,Moi Soi,70,40,165 g,4.300000190734863,1549.0,True,noodles,10,42.9,BlinkIt
+Ramen Instant Noodles - Carbo Hot Chicken Flavour,Samyang,150,150,130 g,4.679999828338623,26733.0,True,noodles,11,0.0,BlinkIt
+Ready To Eat Chicken Noodles,Wai Wai,90,86,420 g,4.730000019073486,46138.0,True,noodles,12,4.4,BlinkIt
+Udon Flat Noodles - Japanese Noodles,Moi Soi,99,80,150 g,4.460000038146973,305.0,True,noodles,13,19.2,BlinkIt
+2 - Minute Instant Noodles Made With Quality Spices,Maggi,180,162,840 g,4.739999771118164,1.0,True,noodles,14,10.0,BlinkIt
+Veg Atta Instant Noodles,Maggi,30,30,72.5 g,4.610000133514404,5046.0,True,noodles,15,0.0,BlinkIt
+Hot n Spicy Korean Ramen Instant Noodles,Too Yumm,45,44,79 g,4.429999828338623,16538.0,True,noodles,16,2.2,BlinkIt
+Masala Cuppa Noodles,Maggi,55,55,70.5 g,4.570000171661377,50386.0,True,noodles,17,0.0,BlinkIt
+Curry Veg Noodles,Top Ramen,103,95,280 g,4.619999885559082,11887.0,True,noodles,18,7.8,BlinkIt
+Whole Wheat Hakka Noodles,Moi Soi,99,55,150 g,4.260000228881836,425.0,True,noodles,19,44.4,BlinkIt
+Geki Carbonara Veg Korean Ramen Noodles,Nissin,60,54,80 g,4.519999980926514,8159.0,True,noodles,20,10.0,BlinkIt
+Veggi Manchow Cup Noodles,Nissin,60,60,70 g,4.679999828338623,18212.0,True,noodles,21,0.0,BlinkIt
+Three Cheese Instant Pasta Cup,Yu,95,85,70 g,4.300000190734863,2706.0,True,noodles,22,10.5,BlinkIt
+Shin Ramyun Spicy Flavoured Instant Noodles,Nongshim,139,139,120 g,4.550000190734863,26861.0,True,noodles,23,0.0,BlinkIt
+Ready To Eat Veg Masala Noodles,Wai Wai,90,86,420 g,4.690000057220459,34473.0,True,noodles,24,4.4,BlinkIt
+Whole Wheat Noodles (Zero Maida),Yu,55,47,150 g,4.630000114440918,14438.0,True,noodles,25,14.5,BlinkIt
+Magic Masala Millet Instant Noodles,Slurrp Farm,76,73,120 g,4.519999980926514,6207.0,True,noodles,26,3.9,BlinkIt
+Mazedar Masala Cup Noodles,Nissin,60,60,70 g,4.699999809265137,19489.0,True,noodles,27,0.0,BlinkIt
+2x Spicy Ramen Instant Noodles - Hot Chicken Flavour,Samyang,150,150,140 g,4.699999809265137,11007.0,True,noodles,28,0.0,BlinkIt
+Hot Chicken Creamy Carbonara Ramen Noodles,Samyang,150,150,140 g,4.71999979019165,6119.0,True,noodles,29,0.0,BlinkIt
+Chowmein Noodles (with Free Masala Pouch),Ching's Secret,30,30,140 g,4.550000190734863,12210.0,True,noodles,30,0.0,BlinkIt
+"Veg Hakka Instant Noodles (Not Fried, Air Dried)",Ching's Secret,120,105,560 g,4.599999904632568,4305.0,True,noodles,31,12.5,BlinkIt
+Spiced Chicken Cup Noodles - Pack of 2,Nissin,120,111,2 x 70 g,4.679999828338623,19156.0,True,noodles,32,7.5,BlinkIt
+Shin Red Super Spicy Noodles,Nongshim,139,139,120 g,4.510000228881836,10739.0,True,noodles,33,0.0,BlinkIt
+Shirataki Udon Noodles - Keto Low Calorie,Moi Soi,220,190,270 g,4.579999923706055,1343.0,True,noodles,34,13.6,BlinkIt
+Cheesy Instant Noodles,Maggi Spicy,100,100,304 g,4.489999771118164,29475.0,True,noodles,35,0.0,BlinkIt
+Geki  Spicy Cheese Korean Ramen Noodles,Nissin,55,55,80 g,4.590000152587891,14939.0,True,noodles,36,0.0,BlinkIt
+Litchi Juice,B Natural,146,79,1 ltr,4.369999885559082,4473.0,True,juice,1,45.9,BlinkIt
+Mango Drink 600 ml,Maaza,35,35,600 ml,4.489999771118164,11.0,True,juice,2,0.0,BlinkIt
+Nimbooz with Lemon Juice,7UP,25,25,350 ml,4.570000171661377,11.0,True,juice,3,0.0,BlinkIt
+Pulpy Orange Fruit Drink,Minute Maid,85,79,1 ltr,4.599999904632568,26712.0,True,juice,5,7.1,BlinkIt
+Nata De Coco Lychee Juice,Paper Boat,40,40,250 ml,4.599999904632568,19897.0,True,juice,6,0.0,BlinkIt
+Popping Strawberry Boba Drink,Moi Soi,150,99,330 ml,4.400000095367432,3504.0,True,juice,7,34.0,BlinkIt
+Swing Zesty Pomegranate Juice,Paper Boat,40,40,600 ml,4.610000133514404,44558.0,True,juice,8,0.0,BlinkIt
+Sea Buckthorn Fruit Pulp,Wellwith,849,699,300 ml,4.610000133514404,1666.0,True,juice,9,17.7,BlinkIt
+Orange Juice,B Natural,160,80,1 ltr,4.360000133514404,43.0,True,juice,10,50.0,BlinkIt
+Zero Sugar Peach Sparkling Drink,Paper Boat,60,60,600 ml,4.53000020980835,9344.0,True,juice,11,0.0,BlinkIt
+Zero Sugar Green Apple Sparkling Drink,Paper Boat,60,60,600 ml,4.550000190734863,13604.0,True,juice,12,0.0,BlinkIt
+Apple Juice,B Natural,160,80,1 ltr,4.239999771118164,40.0,True,juice,13,50.0,BlinkIt
+Lychee Fruit Drink with Nata De Coco,Mogu Mogu,70,68,320 ml,4.690000057220459,36762.0,True,juice,14,2.9,BlinkIt
+Cranberry Juice,Real Activ,175,145,1 ltr,4.539999961853027,16934.0,True,juice,15,17.1,BlinkIt
+Strawberry Fruit Drink,Mogu Mogu,70,68,320 ml,4.639999866485596,14456.0,True,juice,16,2.9,BlinkIt
+Zero Sugar Lemon Lime Sparkling Drink,Paper Boat,60,60,600 ml,4.590000152587891,20723.0,True,juice,17,0.0,BlinkIt
+Jamun Neem Karela Health Juice,Dabur,340,272,1 ltr,4.699999809265137,4915.0,True,juice,18,20.0,BlinkIt
+Melon Fruit Drink with Nata De Coco,Mogu Mogu,70,68,320 ml,4.639999866485596,4403.0,True,juice,19,2.9,BlinkIt
+Mango Drink,Frooti,35,35,600 ml,4.539999961853027,51197.0,True,juice,20,0.0,BlinkIt
+Fruit Power Orange Juice,Real,125,115,1 ltr,4.53000020980835,14989.0,True,juice,21,8.0,BlinkIt
+Grape Fruit Drink with Nata De Coco,Mogu Mogu,70,68,320 ml,4.599999904632568,11144.0,True,juice,22,2.9,BlinkIt
+Liver Care Juice,Kapiva,699,693,1 ltr,4.659999847412109,377.0,True,juice,23,0.9,BlinkIt
+Fruit Power Cranberry Juice,Real,140,129,1 ltr,4.53000020980835,24089.0,True,juice,24,7.9,BlinkIt
+Apple Juice With Nata De Coco,Mogu Mogu,70,68,320 ml,4.590000152587891,2571.0,True,juice,25,2.9,BlinkIt
+Alphonso Mango Drink,Raw Pressery,56,54,200 ml,4.429999828338623,10999.0,True,juice,26,3.6,BlinkIt
+Sea Buckthorn Juice,The Wellness Shop,799,699,500 ml,4.670000076293945,24.0,True,juice,27,12.5,BlinkIt
+Blackcurrant Fruit Drink with Nata De Coco,Mogu Mogu,70,68,320 ml,4.659999847412109,7887.0,True,juice,28,2.9,BlinkIt
+Fruit Power Alphonso Nectar Mango Drink,Real,200,102,1 ltr,4.46999979019165,17174.0,True,juice,29,49.0,BlinkIt
+Aam Panna,Raw Pressery,92,55,750 ml,4.46999979019165,3262.0,True,juice,30,40.2,BlinkIt
+Popping Lychee Boba Drink,Moi Soi,150,99,330 ml,4.429999828338623,4091.0,True,juice,31,34.0,BlinkIt
+Litchi Delight Juice,Tropicana,115,89,1 ltr,4.389999866485596,4352.0,True,juice,33,22.6,BlinkIt
+Popping Grapes Boba Drink,Moi Soi,150,99,330 ml,4.340000152587891,4411.0,True,juice,34,34.0,BlinkIt
+Coconut Water - Pack of 6,Raw Pressery,390,297,6 x 200 ml,4.679999828338623,7817.0,True,juice,36,23.8,BlinkIt
+Xpresso Intense Java Strong Instant Coffee,Sleepy Owl,499,439,100 g,4.510000228881836,2573.0,True,coffee,1,12.0,BlinkIt
+100% Pure Instant Coffee Powder,Nescafe Classic,144,144,72 pcs,4.78000020980835,81640.0,True,coffee,2,0.0,BlinkIt
+100% Pure Instant Coffee Powder - 24 g,Nescafe Classic,124,124,24 g,4.75,42105.0,True,coffee,3,0.0,BlinkIt
+Strong Instant Coffee,Levista,275,199,100 g,4.670000076293945,488.0,True,coffee,4,27.6,BlinkIt
+Instant Coffee 50 g,Bru,155,132,50 g,4.75,14419.0,True,coffee,5,14.8,BlinkIt
+100% Pure Instant Coffee Powder - 45 g,Nescafe Classic,235,235,45 g,4.789999961853027,22461.0,True,coffee,6,0.0,BlinkIt
+Premium Instant Coffee,Levista,290,232,100 g,4.860000133514404,66.0,True,coffee,7,20.0,BlinkIt
+Cafe Style Iced Latte,Nescafe,50,50,170 ml,4.559999942779541,72744.0,True,coffee,8,0.0,BlinkIt
+"Instant Coffee Powder - Rich Aroma, Coffee-Chicory Mix",Nescafe Sunrise,160,130,45 g,4.639999866485596,1897.0,True,coffee,9,18.8,BlinkIt
+Easy Pour Vienna Dark Roast Coffee Bags (Bold & Strong),Blue Tokai,300,279,5 pcs,4.659999847412109,695.0,True,coffee,12,7.0,BlinkIt
+Assorted Instant Coffee Travel Pack,Sleepy Owl,140,99,10 pcs,4.699999809265137,12936.0,True,coffee,13,29.3,BlinkIt
+Easy Pour Mixed Coffee Bags (Light to Dark Roast),Blue Tokai,300,279,5 pcs,4.730000019073486,921.0,True,coffee,14,7.0,BlinkIt
+Easy Pour Attikan Medium Dark Roast Coffee Bags (Nutty & Chocolatey),Blue Tokai,300,279,5 pcs,4.659999847412109,467.0,True,coffee,15,7.0,BlinkIt
+Pure Instant Coffee,Nescafe Classic,150,150,30 pcs,4.739999771118164,2620.0,True,coffee,17,0.0,BlinkIt
+Vienna French Press Dark Roasted Ground Coffee,Blue Tokai,440,418,150 g,4.480000019073486,1357.0,True,coffee,18,5.0,BlinkIt
+Speciale 100% Pure Instant Coffee,Continental,365,344,100 g,4.679999828338623,1308.0,True,coffee,19,5.8,BlinkIt
+Rich Aroma Instant Coffee 10/12 Intensity,Davidoff,949,699,100 g,4.739999771118164,12372.0,True,coffee,20,26.3,BlinkIt
+100% Pure Instant Coffee Powder - 200 g,Nescafe Classic,910,810,200 g,4.670000076293945,2298.0,True,coffee,21,11.0,BlinkIt
+Belgian Mocha Coffee Premix,Sleepy Owl,135,125,5 pcs,4.480000019073486,561.0,True,coffee,22,7.4,BlinkIt
+Classic Iced Latte Cold Coffee,Blue Tokai,175,139,220 ml,3.9700000286102295,270.0,True,coffee,23,20.6,BlinkIt
+Vienna Roast Coffee Capsules,Blue Tokai,450,405,10 pcs,4.53000020980835,69.0,True,coffee,24,10.0,BlinkIt
+"Speciality Blend Filter Coffee (85% coffee, 15% chicory)",Cothas,214,213,200 g,4.78000020980835,1937.0,True,coffee,26,0.5,BlinkIt
+Vienna Coffee Beans,Blue Tokai,650,618,250 g,4.679999828338623,487.0,True,coffee,27,4.9,BlinkIt
+Classic Cold Coffee (180 ml),Bru,40,40,180 ml,4.460000038146973,2923.0,True,coffee,29,0.0,BlinkIt
+Caramel Flavoured Coffee,Country Bean,499,488,100 g,4.489999771118164,332.0,True,coffee,30,2.2,BlinkIt
+Instant Coffee,Bru,140,126,40 g,4.679999828338623,4959.0,True,coffee,31,10.0,BlinkIt
+Blend Premium Freeze Dried Instant Coffee,Nescafe Gold,399,399,50 g,4.78000020980835,4066.0,True,coffee,33,0.0,BlinkIt
+IL Mattino Vivace Coffee (100% coffee),Lavazza,450,405,200 g,4.480000019073486,206.0,True,coffee,35,10.0,BlinkIt
+Grand Classic- Instant Coffee,Tata Coffee,156,142,50 g,4.71999979019165,8574.0,True,coffee,36,9.0,BlinkIt
+Absolut Repair Damage Shampoo,L'Oréal Professionnel,795,795,300 ml,4.539999961853027,3350.0,True,shampoo,1,0.0,BlinkIt
+Hyaluron Pure 72H Purifying Shampoo,L'Oreal Paris,230,198,200 ml,4.550000190734863,15523.0,True,shampoo,2,13.9,BlinkIt
+Intense Repair Shampoo,Dove,172,172,180 ml,4.619999885559082,7637.0,True,shampoo,3,0.0,BlinkIt
+Hyaluron Moisture Shampoo,L'Oreal Paris,210,200,200 ml,4.590000152587891,4571.0,True,shampoo,4,4.8,BlinkIt
+Strong & Long Shampoo with Milk Proteins,Clinic Plus,153,153,175 ml,4.659999847412109,8753.0,True,shampoo,5,0.0,BlinkIt
+Anti Dandruff Anti Hairfall Shampoo,Head & Shoulders,218,190,180 ml,4.590000152587891,12013.0,True,shampoo,6,12.8,BlinkIt
+Density Advanced Volumising Shampoo,L'Oréal Professionnel,795,795,300 ml,4.480000019073486,1088.0,True,shampoo,7,0.0,BlinkIt
+Glycolic Gloss Shampoo,L'Oreal Paris,210,200,200 ml,4.619999885559082,6496.0,True,shampoo,8,4.8,BlinkIt
+Everyday Shampoo,Sebamed,605,605,200 ml,4.539999961853027,278.0,True,shampoo,9,0.0,BlinkIt
+Anti Dandruff Shampoo With Small Onion & Fenugreek,Meera,999,558,650 ml,4.489999771118164,243.0,True,shampoo,10,44.1,BlinkIt
+Scalpe Plus Expert Anti Dandruff Shampoo Bottle of 75ml,Glenmark Pharmaceuticals,344,315,75 ml,4.590000152587891,432.0,True,shampoo,11,8.4,BlinkIt
+"Shampoo Bar with Shikakai, Reetha & Amla",Earth Rhythm,335,291,80 g,4.570000171661377,1199.0,True,shampoo,12,13.1,BlinkIt
+3.5% Anti-Dandruff Shampoo,Minimalist,440,418,200 ml,4.449999809265137,349.0,True,shampoo,13,5.0,BlinkIt
+Amla & Bhringraj Hair Cleanser / Shampoo (Shampoo),Khadi Natural,399,272,210 ml,4.690000057220459,1688.0,True,shampoo,14,31.8,BlinkIt
+Daily Moisturise Baby Wash & Shampoo,Aveeno,1379,1170,532 ml,4.510000228881836,968.0,True,shampoo,15,15.2,BlinkIt
+Lusciously Thick & Long Shampoo,Sunsilk,385,287,360 ml,4.610000133514404,2087.0,True,shampoo,25,25.5,BlinkIt
+Onion & Bhringraj Hairfall Shampoo,Naturali,293,269,200 ml,4.710000038146973,1199.0,True,shampoo,26,8.2,BlinkIt
+Korean Rice Water Advanced Damage Repair Shampoo,Pilgrim,345,311,200 ml,4.699999809265137,707.0,True,shampoo,27,9.9,BlinkIt
+Daily Shine Shampoo For Dull Hair,Dove,435,324,340 ml,4.489999771118164,2591.0,True,shampoo,28,25.5,BlinkIt
+Invigo Nutri Enrich Deep Nourishing Shampoo,Wella Professionals,665,615,250 ml,4.46999979019165,976.0,True,shampoo,29,7.5,BlinkIt
+Maleic Bond Repair Complex 3.5% Hair Shampoo,Minimalist,525,499,250 ml,4.699999809265137,724.0,True,shampoo,30,5.0,BlinkIt
+Intense Repair Shampoo For Dry & Damaged Hair,Dove,435,324,340 ml,4.340000152587891,2432.0,True,shampoo,31,25.5,BlinkIt
+Keratin Smooth Shampoo,Tresemme,435,323,340 ml,4.460000038146973,1725.0,True,shampoo,32,25.7,BlinkIt
+Natural Reetha Kids Shampoo,Tuco Kids,450,368,300 ml,4.199999809265137,216.0,True,shampoo,33,18.2,BlinkIt
+Smooth & Shine Shampoo,Meera,397,286,340 ml,4.650000095367432,251.0,True,shampoo,34,28.0,BlinkIt
+Curl Defining Shampoo,Bare Anatomy,444,436,250 ml,4.659999847412109,476.0,True,shampoo,35,1.8,BlinkIt
+Daily Anti Dandruff Shampoo,Scalpe Pro,199,190,100 ml,4.670000076293945,11680.0,True,shampoo,36,4.5,BlinkIt
+Cream Beauty Bathing Soap (125 g) - Buy 4 Get 1 Free,Dove,519,380,5 x 125 g,4.75,5592.0,True,soap,1,26.8,BlinkIt
+Soap 75 g,Mysore Sandal,38,38,75 g,4.71999979019165,34933.0,True,soap,2,0.0,BlinkIt
+Beauty Cream Soap,Dove,60,60,100 g,4.699999809265137,1492.0,True,soap,3,0.0,BlinkIt
+Lime & Tea Tree Oil Soap 4 x 125 g - Buy 3 Get 1 Free,Liril,225,140,4 x 125 g,4.71999979019165,9837.0,True,soap,4,37.8,BlinkIt
+Skincare Hand Wash Refill,Dettol,109,94,675 ml,4.739999771118164,32555.0,True,soap,5,13.8,BlinkIt
+pH-Balanced Sensitive Hand Wash,Dettol,79,76,200 ml,4.53000020980835,13830.0,True,soap,6,3.8,BlinkIt
+Moisturizing Soap Bars Japanese Hokkaido Milk,Fiama,487,341,5 x 125 g,4.820000171661377,2440.0,True,soap,7,30.0,BlinkIt
+Pure & Gentle Glycerin Soap 75 g,Pears,50,50,75 g,4.71999979019165,908.0,True,soap,8,0.0,BlinkIt
+Serum Soap Bar Collection,Dove,600,450,5 x 125 g,4.75,830.0,True,soap,9,25.0,BlinkIt
+Neem Bathing Bar - Buy 3 Get 1 Free,Dettol,120,114,4 x 75 g,4.710000038146973,12313.0,True,soap,10,5.0,BlinkIt
+Paper Soap,Lazer,399,199,2 packs,4.389999866485596,221.0,True,soap,11,50.1,BlinkIt
+Hand Wash - Natural & Paraben Free,Koparo Clean,265,179,500 ml,4.46999979019165,780.0,True,soap,12,32.5,BlinkIt
+Original Bathing Bar Soap with 12 Hr Protective Shield,Dettol,156,149,4 x 100 g,4.71999979019165,16903.0,True,soap,13,4.5,BlinkIt
+Dark Spots & Acne Clearing Soap,Mannlich,399,289,2 x 75 g,4.920000076293945,501.0,True,soap,14,27.6,BlinkIt
+Cream Beauty Bathing Soap (3 x 125 g),Dove,272,243,3 x 125 g,4.760000228881836,16783.0,True,soap,15,10.7,BlinkIt
+Orchid & Lily Foaming Hand Wash,Dettol,179,152,700 ml,4.510000228881836,2141.0,True,soap,17,15.1,BlinkIt
+Ayurvedic Soap with 2x Coconut Oil,Chandrika,347,261,6 x 125 g,4.809999942779541,1319.0,True,soap,18,24.8,BlinkIt
+Classic Ayurvedic Soap - Pack of 3,Medimix,130,117,3 x 125 g,4.730000019073486,3359.0,True,soap,19,10.0,BlinkIt
+Orchid & Lily Fragrance Foaming Hand Wash,Dettol,135,111,250 ml,4.679999828338623,3277.0,True,soap,20,17.8,BlinkIt
+Classic Ayurvedic Soap,Medimix,280,252,5 x 150 g,4.710000038146973,552.0,True,soap,22,10.0,BlinkIt
+Cleansing & Moisturizing Syndet Soap - Recommended by Dermatologists,Cetaphil,225,203,75 g,4.630000114440918,4531.0,True,soap,23,9.8,BlinkIt
+pH-Balanced Sensitive Hand Wash (Refill),Dettol,109,104,675 ml,4.71999979019165,10973.0,True,soap,24,4.6,BlinkIt
+Glycerine Natural Tonning Soap,Medimix,134,114,4 x 100 g,4.789999961853027,183.0,True,soap,25,14.9,BlinkIt
+Pure & Gentle Soap,Pears,211,186,3 x 125 g,4.760000228881836,20861.0,True,soap,26,11.8,BlinkIt
+Liquid Hand Wash Refill Pouch - Moisturizing Skincare,Dettol,219,174,1.35 ltr,4.71999979019165,8109.0,True,soap,27,20.5,BlinkIt
+Glycerine Oil Balance Soap,Medimix,160,136,4 x 100 g,4.75,285.0,True,soap,28,15.0,BlinkIt
+Kojic Acid 1% Soap,Dermatouch,510,299,3 pcs,4.599999904632568,1665.0,True,soap,29,41.4,BlinkIt
+Serum Bar Soap with Sandalwood Oil,Dove,305,244,3 x 125 g,4.710000038146973,649.0,True,soap,30,20.0,BlinkIt
+Sandal & Eladi Oil Soap,Medimix,200,170,4 x 125 g,4.670000076293945,290.0,True,soap,31,15.0,BlinkIt
+Liquid Hand Wash Refill Pouch (Original Germ Protection),Dettol,219,174,1.35 ltr,4.599999904632568,9913.0,True,soap,32,20.5,BlinkIt
+Sandalwood & Saffron Magic Soap,Ghar Soaps,199,182,100 g,4.559999942779541,6549.0,True,soap,33,8.5,BlinkIt
+Bright Wonder Brightening Soap,Bella Vita,349,299,3 x 100 g,4.190000057220459,77.0,True,soap,34,14.3,BlinkIt
+Bouquet Hand Wash - Refill Pack,Kimirica,749,675,1 ltr,4.360000133514404,93.0,True,soap,35,9.9,BlinkIt
+2% Kojic Acid Detan Soap for Tan Removal,Mannlich,399,299,2 x 75 g,4.75,1011.0,True,soap,36,25.1,BlinkIt
+White Now Stain Eraser Whitening Toothpaste,Closeup,170,145,100 g,4.71999979019165,3263.0,True,toothpaste,13,14.7,BlinkIt
+Farm Mint Toothpaste,Fang,399,298,120 g,4.880000114440918,45.0,True,toothpaste,14,25.3,BlinkIt
+Red Herbal Toothpaste,Dabur,204,147,300 g,4.710000038146973,4872.0,True,toothpaste,16,27.9,BlinkIt
+White Now - Purple Color Corrector Whitening Toothpaste,Closeup,170,145,100 g,4.71999979019165,5603.0,True,toothpaste,17,14.7,BlinkIt
+Purple Magic Whitening Toothpaste,Perfora,199,186,75 g,4.619999885559082,2706.0,True,toothpaste,18,6.5,BlinkIt
+Dant Kanti Natural Herbal Toothpaste (500 g),Patanjali,239,208,500 g,4.659999847412109,3775.0,True,toothpaste,19,13.0,BlinkIt
+Total Advanced Health Anti-Germ Toothpaste with Toothbrush,Colgate,378,234,2 x 150 g,4.739999771118164,4099.0,True,toothpaste,20,38.1,BlinkIt
+Vajradanti Ayurvedic Herbal Toothpaste for Strong Teeth & Gum,Vicco,150,150,200 g,4.760000228881836,8652.0,True,toothpaste,21,0.0,BlinkIt
+Red Gel Toothpaste for effective Oral Care,Dabur,246,122,2 x 150 g,4.619999885559082,9879.0,True,toothpaste,22,50.4,BlinkIt
+"Kids Toothpaste (Strawberry Flavor, 12M+)",Chicco,159,119,50 g,4.789999961853027,3536.0,True,toothpaste,23,25.2,BlinkIt
+Meswak Complete Tooth & Gum Care Herbal Toothpaste,Dabur,135,115,200 g,4.730000019073486,5714.0,True,toothpaste,24,14.8,BlinkIt
+Hydrate Toothpaste,Clove Oral Care,355,259,100 g,4.619999885559082,64.0,True,toothpaste,25,27.0,BlinkIt
+MaxFresh Rainbow Fresh Gel Toothpaste,Colgate,150,120,100 g,4.789999961853027,2756.0,True,toothpaste,26,20.0,BlinkIt
+Everfresh+ Gel Toothpaste (Red Hot),Closeup,129,129,150 g,4.71999979019165,12401.0,True,toothpaste,27,0.0,BlinkIt
+Revive Toothpaste,Clove Oral Care,355,259,100 g,4.829999923706055,60.0,True,toothpaste,28,27.0,BlinkIt
+Meswak Complete Tooth & Gum Care Toothpaste - Mega Saver Pack,Dabur,255,169,2 x 200 g,4.699999809265137,4635.0,True,toothpaste,29,33.7,BlinkIt
+Complete Care Herbal Toothpaste,Himalaya,97,97,150 g,4.699999809265137,9842.0,True,toothpaste,30,0.0,BlinkIt
+Ayurdent Classic Herbal Toothpaste,MAHARISHI ayurveda,260,198,75 ml,4.760000228881836,131.0,True,toothpaste,31,23.8,BlinkIt
+Apple-Banana Kids Toothpaste (6m to 6 yr),Chicco,159,135,50 g,4.75,1175.0,True,toothpaste,32,15.1,BlinkIt
+Colour Changing Kids Toothpaste,Clove Oral Care,290,199,100 g,4.769999980926514,75.0,True,toothpaste,33,31.4,BlinkIt
+MaxFresh Peppermint Ice Gel Toothpaste,Colgate,160,136,150 g,4.760000228881836,6711.0,True,toothpaste,34,15.0,BlinkIt
+Dream White - Whitening Toothpaste,Perfora,141,132,75 g,4.639999866485596,2437.0,True,toothpaste,35,6.4,BlinkIt
+Visible White Purple Whitening Toothpaste,Colgate,395,238,2 x 120 g,4.739999771118164,4350.0,True,toothpaste,36,39.7,BlinkIt
+Plus Double Power Washing Detergent Powder (Jasmine & Rose),Tide,1179,894,10 kg,4.670000076293945,21916.0,True,detergent,1,24.2,BlinkIt
+Top Load Liquid Detergent Refill Pouch,Godrej Fab,99,99,800 ml,4.71999979019165,50440.0,True,detergent,2,0.0,BlinkIt
+Matic Top Load Liquid Detergent,Rin,99,99,1 kg,4.710000038146973,2878.0,True,detergent,3,0.0,BlinkIt
+Easy Wash Detergent Powder,Surf Excel,160,160,1 kg,4.739999771118164,1.0,True,detergent,4,0.0,BlinkIt
+Double Power Detergent Powder (Lemon & Mint),Tide,799,651,6 kg,4.630000114440918,4120.0,True,detergent,5,18.5,BlinkIt
+Quick Wash Detergent Powder,Surf Excel,115,115,500 g,4.730000019073486,18400.0,True,detergent,6,0.0,BlinkIt
+Stain Eraser Detergent Bar 80 g,Surf Excel,10,10,84 g,4.670000076293945,42986.0,True,detergent,7,0.0,BlinkIt
+Plus Double Power Detergent Powder,Tide,140,140,1 kg,4.71999979019165,38528.0,True,detergent,8,0.0,BlinkIt
+Double Power Plus Detergent Powder (Lavender Fresh),Tide,815,664,6 kg,4.610000133514404,1624.0,True,detergent,9,18.5,BlinkIt
+Woollen Liquid Detergent For Winterwear,Godrej Ezee,225,225,900 g,4.639999866485596,16939.0,True,detergent,10,0.0,BlinkIt
+Mild Baby Laundry Detergent Refill,Mee Mee,449,229,1 ltr,4.590000152587891,1546.0,True,detergent,11,49.0,BlinkIt
+Mild Baby Laundry Detergent,Mee Mee,649,349,1.5 ltr,4.639999866485596,1273.0,True,detergent,12,46.2,BlinkIt
+Woollen Liquid Detergent for Winterwear,Godrej Ezee,430,409,2 kg,4.659999847412109,3604.0,True,detergent,13,4.9,BlinkIt
+Top Load Liquid Detergent,Surf Excel,355,335,2 ltr,4.730000019073486,13918.0,True,detergent,14,5.6,BlinkIt
+Liquid Detergent Refill - Front & Top Load (Lavender & Lilac),Koparo Clean,459,430,3 ltr,4.690000057220459,1802.0,True,detergent,15,6.3,BlinkIt
+Plant Powered Laundry Baby Detergent,Mother Sparsh,649,383,1 ltr,4.230000019073486,687.0,True,detergent,16,41.0,BlinkIt
+Detergent Bar,Rin,10,10,130 g,4.699999809265137,81552.0,True,detergent,17,0.0,BlinkIt
+Fluff Matic Front Load Liquid Detergent,IFB Essentials,695,625,2 ltr,4.699999809265137,111.0,True,detergent,19,10.1,BlinkIt
+Natural Front Load Liquid Detergent Refill Pack (Lavender & Vanilla),Beco,349,259,2 ltr,4.659999847412109,2791.0,True,detergent,20,25.8,BlinkIt
+Matic Lintelligent Front Load Detergent Powder,Henko,600,378,2 kg,4.679999828338623,590.0,True,detergent,21,37.0,BlinkIt
+Front Load Liquid Detergent,Surf Excel,265,265,1 ltr,4.639999866485596,5956.0,True,detergent,22,0.0,BlinkIt
+Undergarment Liquid Detergent (Toxin-Free Formulation),Awenest,199,199,300 ml,4.190000057220459,47.0,True,detergent,23,0.0,BlinkIt
+Ultra Clean Top & Front Load Liquid Detergent,BLUUM,599,474,4.5 kg,4.199999809265137,52.0,True,detergent,25,20.9,BlinkIt
+Power Gel Front Load Liquid Detergent,Ariel,215,215,950 g,4.480000019073486,1002.0,True,detergent,26,0.0,BlinkIt
+Detergent Pods /Softener With Bio Enzymes,Ecosys,1050,599,30 pcs,4.75,119.0,True,detergent,27,43.0,BlinkIt
+Top Load Liquid Detergent - 1 l,Surf Excel,235,235,1 ltr,4.679999828338623,10342.0,True,detergent,28,0.0,BlinkIt
+Liquid Detergent - Front & Top Load (Lavender & Lilac),Koparo Clean,269,177,900 ml,4.389999866485596,987.0,True,detergent,29,34.2,BlinkIt
+Stain Eraser Detergent Bar,Surf Excel,20,20,145 g,4.619999885559082,23365.0,True,detergent,30,0.0,BlinkIt
+Power Gel Front Load Liquid Detergent (2 Kg),Ariel,395,395,2 kg,4.679999828338623,2033.0,True,detergent,31,0.0,BlinkIt
+Power Gel Top Load Liquid Detergent,Ariel,189,189,950 g,4.599999904632568,2669.0,True,detergent,32,0.0,BlinkIt
+Matic Front Load Liquid Detergent,Surf Excel,885,749,5 ltr,4.699999809265137,7143.0,True,detergent,33,15.4,BlinkIt
+Front Load Detergent Powder 2 kg,Ariel,660,495,2 kg,4.590000152587891,2866.0,True,detergent,34,25.0,BlinkIt
+Double Power Jasmine & Rose Detergent Powder,Tide,299,299,3 kg,4.590000152587891,117.0,True,detergent,36,0.0,BlinkIt
+Best Bite Chocolate Filled Waffle Cones - Belgian Chocolate,Nova Nova,110,97,50 g,4.489999771118164,2442.0,True,chocolate,1,11.8,BlinkIt
+4 Fingers Choco Coated Wafer Bar,Nestle KitKat,30,30,38.5 g,4.710000038146973,39.0,True,chocolate,2,0.0,BlinkIt
+Max Choco Coated Crunchy Wafer Bar,Nestle Munch,20,20,38.5 g,4.690000057220459,23.0,True,chocolate,3,0.0,BlinkIt
+Assorted Chocolates Variety Pack,Snickers,145,124,110 g,4.699999809265137,2332.0,True,chocolate,4,14.5,BlinkIt
+Milkinis Milk Chocolate Bar,Cadbury Dairy Milk,36,35,34 g,4.679999828338623,73881.0,True,chocolate,5,2.8,BlinkIt
+Chocolate Bar,Cadbury Dairy Milk,26,26,26 g,4.670000076293945,1.0,True,chocolate,6,0.0,BlinkIt
+Nougat & Caramel Miniatures Filled Bar Chocolate Pack,Snickers,199,199,138 g,4.760000228881836,3838.0,True,chocolate,7,0.0,BlinkIt
+Choo Strawberry Flavoured ShareBag,Nestle Milkybar,50,50,99 g,4.71999979019165,91239.0,True,chocolate,8,0.0,BlinkIt
+Oreo Milk Chocolate Bar,Cadbury Dairy Milk Silk,100,100,58.5 g,4.71999979019165,1.0,True,chocolate,9,0.0,BlinkIt
+World's Hottest Chocolate,Jolochip,269,239,10 g,3.5999999046325684,104.0,True,chocolate,10,11.2,BlinkIt
+Peanut Nougat & Caramel Chocolate Filled Bar,Snickers,45,45,40 g,4.739999771118164,32731.0,True,chocolate,11,0.0,BlinkIt
+Rich Cocoa 70% Dark Chocolate Bar,Cadbury Bournville,150,135,75 g,4.670000076293945,57939.0,True,chocolate,12,10.0,BlinkIt
+Smooth Milk Minis Chocolate Pack,Galaxy,135,115,72 g,4.670000076293945,4489.0,True,chocolate,13,14.8,BlinkIt
+Milk Chocolate Pack,Cadbury Nutties,45,45,30 g,4.570000171661377,79687.0,True,chocolate,14,0.0,BlinkIt
+Chocolate Filled Bar,Cadbury 5 Star,20,20,35.2 g,4.730000019073486,11.0,True,chocolate,15,0.0,BlinkIt
+Chocolate Gift Pack (4 pieces),Ferrero Rocher,169,169,50 g,4.690000057220459,66406.0,True,chocolate,17,0.0,BlinkIt
+Creamy Milky Treat,Nestle Milkybar,40,40,42 g,4.730000019073486,76739.0,True,chocolate,18,0.0,BlinkIt
+Smooth Milk Chocolate Bar,Galaxy,180,144,110 g,4.510000228881836,226.0,True,chocolate,19,20.0,BlinkIt
+Sugar Free Dark Chocolate Bar,Amul,45,45,35 g,4.639999866485596,19595.0,True,chocolate,20,0.0,BlinkIt
+55% Cocoa Dark Chocolate Bar,Amul,180,180,150 g,4.690000057220459,35518.0,True,chocolate,21,0.0,BlinkIt
+Open Secret Milk Chocolate Bar,Fabelle,575,486,121 g,4.230000019073486,550.0,True,chocolate,22,15.5,BlinkIt
+Cranberry Dark Chocolate Bar,Cadbury Bournville,134,120,78 g,4.699999809265137,35878.0,True,chocolate,23,10.4,BlinkIt
+Max Nuts Double Choco Coated Wafer Bar,Nestle Munch,25,25,37.5 g,4.619999885559082,24472.0,True,chocolate,24,0.0,BlinkIt
+Smooth Milk Chocolate Bar with Goodness of Milk & Cocoa,Galaxy,100,90,56 g,4.639999866485596,7545.0,True,chocolate,25,10.0,BlinkIt
+Fruit & Nut Dark Chocolate Bar,Cadbury Bournville,134,130,75 g,4.699999809265137,40973.0,True,chocolate,26,3.0,BlinkIt
+Minis Choco Coated Wafer Bar,Nestle KitKat,120,120,133.2 g,4.760000228881836,67755.0,True,chocolate,27,0.0,BlinkIt
+Strawberry Cheesecake Handcrafted Centre Filled Milk Chocolate Bar,Fabelle,475,459,131 g,4.309999942779541,399.0,True,chocolate,28,3.4,BlinkIt
+Moments Chocolate Gift Pack (16 pieces),Ferrero Rocher,269,255,92.8 g,4.699999809265137,35011.0,True,chocolate,29,5.2,BlinkIt
+Fruit & Nut Chocolate Bar Cricket Pack,Cadbury Dairy Milk,50,50,36 g,4.71999979019165,91759.0,True,chocolate,30,0.0,BlinkIt
+Miniatures Coconut Filled Bar Chocolate Pack,Bounty,160,141,100 g,4.710000038146973,10014.0,True,chocolate,31,11.9,BlinkIt
+Duo Chocolates Pack,Cadbury Gems,20,20,24.97 g,4.650000095367432,1.0,True,chocolate,32,0.0,BlinkIt
+Pistachio Kunafa Chocolate Bar,Chocobles,295,249,95 g,4.480000019073486,49.0,True,chocolate,33,15.6,BlinkIt
+Kids Protein Ball - Double Chocolate Choco Comets by Kaidoo,Kaidoo,199,199,80 g,4.610000133514404,77.0,True,chocolate,34,0.0,BlinkIt
+Schoko Bons Crispy,Kinder,150,145,67.2 g,4.769999980926514,33732.0,True,chocolate,35,3.3,BlinkIt
+Milk Chocolate Bar,Cadbury Dairy Milk Silk,102,96,60 g,4.71999979019165,66173.0,True,chocolate,36,5.9,BlinkIt
+Cultured Desi Cow A2 Gir Ghee,Two Brothers,935,888,250 ml,4.210000038146973,201.0,True,ghee,1,5.0,BlinkIt
+Pure Cow Ghee (Pouch) (Hasuvina Tuppa),Nandini,350,328,500 ml,4.730000019073486,8433.0,True,ghee,2,6.3,BlinkIt
+Cultured Desi Cow A2 Gir Ghee (A2 Gir Tuppa),Two Brothers,1730,1644,500 ml,4.449999809265137,466.0,True,ghee,4,5.0,BlinkIt
+Cow Ghee (Hasuvina Tuppa),GRB,200,174,200 ml,4.699999809265137,7600.0,True,ghee,5,13.0,BlinkIt
+Desi Cow Ghee (Tuppa),GRB,10,10,10 ml,4.599999904632568,4779.0,True,ghee,6,0.0,BlinkIt
+Desi Cow A2 Ghee (Bilona Churned),Anveshan,2025,1433,1 ltr,4.570000171661377,3010.0,True,ghee,9,29.2,BlinkIt
+Desi Cow A2 Ghee (A2 Tuppa),Barosi,2040,1622,1 ltr,4.409999847412109,1785.0,True,ghee,11,20.5,BlinkIt
+High Aroma Cow Ghee (Hasuvina Tuppa),Amul,165,156,200 ml,4.630000114440918,9560.0,True,ghee,12,5.5,BlinkIt
+Desi Danedar Cow Ghee,Country Delight,789,599,700 ml,4.199999809265137,1475.0,True,ghee,13,24.1,BlinkIt
+Pure Ghee (Tuppa),Amul,670,612,1 ltr,4.579999923706055,9320.0,True,ghee,14,8.7,BlinkIt
+Bilona Organic Cow Ghee,Himalayan Natives,949,677,500 ml,4.300000190734863,258.0,True,ghee,15,28.7,BlinkIt
+Buffalo Ghee,Country Delight,789,571,700 ml,4.460000038146973,49.0,True,ghee,16,27.6,BlinkIt
+Cow Ghee,Akshayakalpa Organic,362,320,195 ml,4.489999771118164,871.0,True,ghee,18,11.6,BlinkIt
+Cow Ghee (1 l) (Hasuvina Tuppa),Patanjali,800,752,1 ltr,4.659999847412109,13650.0,True,ghee,20,6.0,BlinkIt
+Desi Organic Cow Ghee,Akshayakalpa Organic,756,741,300 ml,4.090000152587891,115.0,True,ghee,22,2.0,BlinkIt
+Pure Cow Ghee,Organic India,899,634,500 ml,4.570000171661377,7059.0,True,ghee,24,29.5,BlinkIt
+Desi Gir Bilona Cow A2 Ghee,Native,1175,799,500 ml,4.670000076293945,35.0,True,ghee,25,32.0,BlinkIt
+Ghee (Tuppa),GRB,193,183,200 ml,4.670000076293945,966.0,True,ghee,27,5.2,BlinkIt
+A2 Gir Cow Ghee (Bilona Churned),Anveshan,1250,831,500 ml,4.559999942779541,2462.0,True,ghee,29,33.5,BlinkIt
+Premium Cow Ghee (Hasuvina Tuppa),Gowardhan,430,394,500 ml,4.659999847412109,39479.0,True,ghee,30,8.4,BlinkIt
+Desi A2 Gir Ghee (Cow) (A2 Gir Tuppa),Praakritik,1399,991,500 ml,4.349999904632568,120.0,True,ghee,32,29.2,BlinkIt
+Desi Cow A2 Ghee,Jivika,1689,1099,1 ltr,3.1700000762939453,78.0,True,ghee,33,34.9,BlinkIt
+Pure Cow Ghee (Hasuvina Tuppa),Aashirvaad Svasti,520,460,500 ml,4.730000019073486,5366.0,True,ghee,35,11.5,BlinkIt
+Brown Ghee 250 g (Kempu Tuppa),Jharna,200,200,250 g,4.71999979019165,5710.0,True,ghee,36,0.0,BlinkIt
+Rice Bran Oil (Akki Enne),Fortune,219,162,870 g,4.639999866485596,39260.0,True,oil,1,26.0,BlinkIt
+Refined Sunflower Oil (Suryakanthi Enne),Gold Winner,205,178,1 ltr,4.730000019073486,33713.0,True,oil,2,13.2,BlinkIt
+Refined Sunflower Oil,Fortune,190,163,840 g,4.639999866485596,7283.0,True,oil,6,14.2,BlinkIt
+Sunflower Oil (Suryakanthi Enne),Gold Winner,110,93,500 ml,4.699999809265137,10902.0,True,oil,7,15.5,BlinkIt
+Premium Kachi Ghani Pure Mustard Oil (910 g) (Sasive Enne),Fortune,240,197,910 g,4.730000019073486,17.0,True,oil,8,17.9,BlinkIt
+Kachi Ghani Mustard Oil (Sasive Enne),Sunpure,220,179,1 ltr,4.599999904632568,758.0,True,oil,9,18.6,BlinkIt
+Simply Better 100% Pure Cold Pressed Mustard Oil /Sarso Oil (Cold Pressed Sasive Enne),Tata,350,289,1 ltr,4.739999771118164,9493.0,True,oil,10,17.4,BlinkIt
+Simply Better 100% Pure Cold Pressed Groundnut Oil / Peanut Oil (Cold Pressed Kadale Enne),Tata,500,361,1 ltr,4.739999771118164,8536.0,True,oil,11,27.8,BlinkIt
+Kachi Ghani Mustard Oil (0% Trans Fat) (Sasive Enne),Dhara,270,189,1 ltr,4.619999885559082,15696.0,True,oil,12,30.0,BlinkIt
+Black Cold Pressed Mustard Oil,Two Brothers,395,375,1 ltr,4.260000228881836,221.0,True,oil,14,5.1,BlinkIt
+Aradya Spiritual Fragrant Lamp Pooja Oil (Non-Edible) by Pujaa Plus,Pujaa Plus,250,239,1 ltr,4.789999961853027,61.0,True,oil,15,4.4,BlinkIt
+Coconad Coconut Oil (Thengina Enne),KLF,225,182,500 ml,4.710000038146973,3697.0,True,oil,16,19.1,BlinkIt
+Active Rice Bran & Soyabean Blended Cooking Oil,Fortune Xpert,200,165,850 g,4.53000020980835,231.0,True,oil,17,17.5,BlinkIt
+Cold Pressed Virgin Coconut Oil,Max Care,550,444,500 ml,4.659999847412109,1098.0,True,oil,18,19.3,BlinkIt
+Pancha Deepam Pooja Oil (Non-Edible) by Jai Shubam,Jai Shubam,249,189,500 ml,4.440000057220459,340.0,True,oil,19,24.1,BlinkIt
+Kerala Cold Pressed Virgin Coconut Oil (Thengina Enne),Kapiva,499,446,500 ml,4.690000057220459,2488.0,True,oil,20,10.6,BlinkIt
+Health Refined Sunflower Oil (Suryakanthi Enne),Dhara,225,169,1 ltr,4.590000152587891,9275.0,True,oil,21,24.9,BlinkIt
+Gold Sunflower & Rice Bran Refined Blended Cooking Oil (1 ltr) (Aduge Enne),Saffola,240,202,910 g,4.610000133514404,8492.0,True,oil,22,15.8,BlinkIt
+100% Pure Coconut Oil,Parachute,199,180,300 ml,4.710000038146973,39666.0,True,oil,23,9.5,BlinkIt
+Extra Light Olive Oil for Indian Cooking (Olive Enne),Borges,2200,1109,1 ltr,4.650000095367432,1553.0,True,oil,24,49.6,BlinkIt
+Extra Virgin Olive Oil,Tata Simply Better,399,359,250 ml,4.599999904632568,220.0,True,oil,25,10.0,BlinkIt
+Deepam Pooja Oil (Non-Edible) by VVV,VVV,245,229,1 ltr,4.650000095367432,9149.0,True,oil,26,6.5,BlinkIt
+Gingelly Oil,Mr. Gold,375,307,1 ltr,4.670000076293945,716.0,True,oil,27,18.1,BlinkIt
+Extra Virgin Olive Oil (Extra Virgin Olive Enne),Figaro,1999,1165,1 ltr,4.610000133514404,1109.0,True,oil,28,41.7,BlinkIt
+Cold-Pressed Extra Virgin Olive Oil 1 l (Extra Virgin Olive Enne),Borges,2300,1149,1 ltr,4.610000133514404,714.0,True,oil,30,50.0,BlinkIt
+Cold Pressed Groundnut Oil,Saffola,450,371,1 ltr,4.619999885559082,560.0,True,oil,33,17.6,BlinkIt
+Sunlite Refined Sunflower Oil (Suryakanthi Enne),Fortune,195,185,800 g,4.630000114440918,4205.0,True,oil,34,5.1,BlinkIt
+Soya Health Refined Soyabean Oil,Fortune,170,154,750 g,4.650000095367432,62016.0,True,oil,35,9.4,BlinkIt
+Cold Pressed Groundnut Oil (Kadale Enne),Anveshan,2000,1504,5 ltr,4.730000019073486,2771.0,True,oil,36,24.8,BlinkIt
+Sugar,24 Mantra Organic,160,129,1 kg,4.570000171661377,1961.0,True,sugar,1,19.4,BlinkIt
+White Label Sulphurless Sugar (Sulphur Rahitha Sakkare),Parry's,70,59,1 kg,4.71999979019165,49806.0,True,sugar,2,15.7,BlinkIt
+Sugar (Packet) (Sakkare),Whole Farm Grocery,75,51,1 kg,4.690000057220459,27.0,True,sugar,3,32.0,BlinkIt
+Pure & Hygienic S30 Sulphurless Sugar (Sulphur Rahitha Sakkare),Madhur,65,60,1 kg,4.699999809265137,6017.0,True,sugar,4,7.7,BlinkIt
+Amrit Brown Sugar,Parry's,60,56,500 g,4.690000057220459,3731.0,True,sugar,5,6.7,BlinkIt
+Fine Grain Sulphurless Sugar (Sulphur Rahitha Sakkare),Fortune,75,55,1 kg,4.690000057220459,4074.0,True,sugar,6,26.7,BlinkIt
+Pure Refined Sulphurless Sugar (Sulphur Rahitha Sakkare),Parry's,80,65,1 kg,4.710000038146973,3286.0,True,sugar,7,18.8,BlinkIt
+Organic Brown Sugar,Organic Tattva,90,79,500 g,4.699999809265137,14847.0,True,sugar,8,12.2,BlinkIt
+Natural Organic Brown Sugar,True Story,90,74,500 g,4.679999828338623,3526.0,True,sugar,9,17.8,BlinkIt
+Sweet Care Low GI Sugar (Sakkare),Parry's,70,67,500 g,4.78000020980835,3219.0,True,sugar,10,4.3,BlinkIt
+Khandsari Pesticide-Free Sugar,Safe Harvest,80,72,500 g,4.599999904632568,703.0,True,sugar,11,10.0,BlinkIt
+Brown Sugar,24 Mantra Organic,90,79,500 g,4.639999866485596,2004.0,True,sugar,12,12.2,BlinkIt
+Gold Brown Sugar,Parry's,70,60,500 g,4.619999885559082,3904.0,True,sugar,13,14.3,BlinkIt
+Sugar (5 kg) (Sakkare),Whole Farm Grocery,490,249,5 kg,4.650000095367432,57628.0,True,sugar,14,49.2,BlinkIt
+Raw Sugar / Khandsari,Conscious Food,99,81,500 g,4.630000114440918,8293.0,True,sugar,15,18.2,BlinkIt
+Premium Sugar Powder (Sakkare Pudi),Whole Farm,80,41,500 g,4.489999771118164,15919.0,True,sugar,16,48.8,BlinkIt
+Coconut Palm Sugar,Miresi,315,249,350 g,4.559999942779541,58.0,True,sugar,17,21.0,BlinkIt
+Coconut Organic Sugar,Praakritik,390,353,300 g,4.570000171661377,199.0,True,sugar,19,9.5,BlinkIt
+Premium Brown Sugar,Whole Farm,200,89,1000 g,4.46999979019165,777.0,True,sugar,20,55.5,BlinkIt
+White Label Sulphurless Sugar (5 kg) (Sulphur Rahitha Sakkare),Parry's,330,321,5 kg,4.730000019073486,3254.0,True,sugar,21,2.7,BlinkIt
+Premium Organic Coconut Sugar Jaggery,Mevano,549,499,700 g,4.610000133514404,93.0,True,sugar,23,9.1,BlinkIt
+Premium Organic Coconut Sugar,Mevano,349,349,350 g,4.679999828338623,106.0,True,sugar,25,0.0,BlinkIt
+Superfine Sugar (Sakkare),Parry's,85,85,1 kg,4.579999923706055,705.0,True,sugar,27,0.0,BlinkIt
+Sugar with Stevia (Sakkare),I'm Lite,120,108,500 g,4.789999961853027,3156.0,True,sugar,28,10.0,BlinkIt
+Desi Khandsari Unrefined Organic Brown Sugar,Organic India,120,100,500 g,4.739999771118164,2357.0,True,sugar,29,16.7,BlinkIt
+Organic Sugar,Pro Nature,76,74,500 g,4.360000133514404,588.0,True,sugar,30,2.6,BlinkIt
+Fine Grain Sulphurless Sugar (5 Kg) (Sulphur Rahitha Sakkare),Fortune,370,293,5 kg,4.630000114440918,307.0,True,sugar,31,20.8,BlinkIt
+Sulphurless Sugar (Sulphur Rahitha Sakkare),Safal,70,59,1 kg,4.539999961853027,120.0,True,sugar,32,15.7,BlinkIt
+Premium Brown Demerara Sugar,Dhampur Green,99,99,1000 g,4.550000190734863,459.0,True,sugar,34,0.0,BlinkIt
+Coconad Natural Coconut Sugar (Sakkare),KLF,311,281,300 g,4.409999847412109,44.0,True,sugar,35,9.6,BlinkIt
+Organic Jaggery Coconut Sugar,Urban Platter,300,300,300 g,4.670000076293945,63.0,True,sugar,36,0.0,BlinkIt
+Tur / Arhar Dal,24 Mantra Organic,295,221,1 kg,4.570000171661377,644.0,True,dal,1,25.1,BlinkIt
+Unpolished Masoor Dal (Masoor Bele),Tata Sampann,85,70,500 g,4.699999809265137,34379.0,True,dal,2,17.6,BlinkIt
+Unpolished Yellow Moong Dal (Dhuli) Split (Hesaru Bele),Tata Sampann,107,83,500 g,4.730000019073486,57784.0,True,dal,3,22.4,BlinkIt
+Unpolished Toor Dal/Arhar Dal (Togari Bele),Tata Sampann,224,168,1 kg,4.71999979019165,60425.0,True,dal,4,25.0,BlinkIt
+Unpolished Toor Dal (Togari Bele),Tata Sampann,448,314,2 kg,4.760000228881836,8479.0,True,dal,5,29.9,BlinkIt
+Unpolished Green Moong (Sabut) Whole (Hesaru Kalu),Tata Sampann,99,92,500 g,4.699999809265137,32216.0,True,dal,6,7.1,BlinkIt
+Unpolished Chana Dal (Kadale Bele),Tata Sampann,74,65,500 g,4.71999979019165,56035.0,True,dal,7,12.2,BlinkIt
+Unpolished Split Urad Dal (Dhuli) (Uddina Bele),Tata Sampann,119,110,500 g,4.699999809265137,17412.0,True,dal,8,7.6,BlinkIt
+Daliya – 2X Nutrition,Better Nutrition,125,108,1 kg,4.590000152587891,288.0,True,dal,9,13.6,BlinkIt
+Chana Dal Fried (Kadale Bele),Bhagyalakshmi,80,72,500 g,4.650000095367432,4202.0,True,dal,10,10.0,BlinkIt
+Premium Kashmiri Red Rajma (Kempu Rajma),Whole Farm,150,70,500 g,4.46999979019165,17366.0,True,dal,11,53.3,BlinkIt
+Unpolished Green Moong Dal (Chilka) (Hesaru Kalu),Tata Sampann,101,94,500 g,4.699999809265137,24793.0,True,dal,12,6.9,BlinkIt
+Unpolished Moong Dal (Dhuli) Split (Hesaru Bele),Tata Sampann,213,180,1 kg,4.739999771118164,18233.0,True,dal,13,15.5,BlinkIt
+Arhar/ Toor Dal (Togari Bele),Basic,240,140,1 kg,4.539999961853027,76545.0,True,dal,14,41.7,BlinkIt
+Toor Dal (500 g) (Togari Bele),Whole Farm Grocery,125,78,500 g,4.630000114440918,20228.0,True,dal,15,37.6,BlinkIt
+Premium Moong (Sabut) Green (Hesaru Kalu),Whole Farm,172,75,500 g,4.659999847412109,24225.0,True,dal,16,56.4,BlinkIt
+Premium Black Masoor Dal (Kappu Masoor Bele),Whole Farm,110,55,500 g,4.679999828338623,21214.0,True,dal,17,50.0,BlinkIt
+Premium Roasted Chana Dal (Huri Kadale Bele),Whole Farm,120,76,500 g,4.579999923706055,8891.0,True,dal,18,36.7,BlinkIt
+Moong Dal (Dhuli),24 Mantra Organic,160,124,500 g,4.659999847412109,1713.0,True,dal,19,22.5,BlinkIt
+Premium Toor Dal/Arhar Dal (Togari Bele),Whole Farm,145,82,500 g,4.590000152587891,18048.0,True,dal,20,43.4,BlinkIt
+Organic Arhar Dal Unpolished,Tata Sampann,150,136,500 g,4.690000057220459,8626.0,True,dal,21,9.3,BlinkIt
+Urad Gota (Uddina Gota),Tenali Double Horse,210,169,1 kg,4.75,9477.0,True,dal,22,19.5,BlinkIt
+Premium White Lobiya (Bili Lobia),Whole Farm,80,69,500 g,4.690000057220459,10143.0,True,dal,23,13.8,BlinkIt
+Masoor Dal Unpolished (Masoor Bele),Tata Sampann,172,149,1 kg,4.739999771118164,15635.0,True,dal,24,13.4,BlinkIt
+Unpolished Urad Gota Dal,Tata Sampann,229,217,1 kg,4.710000038146973,1477.0,True,dal,25,5.2,BlinkIt
+Organic Mix Dal,Organic Tattva,155,121,500 g,4.590000152587891,1467.0,True,dal,26,21.9,BlinkIt
+Unpolished White Dried Peas,Tata Sampann,62,57,500 g,4.71999979019165,2830.0,True,dal,27,8.1,BlinkIt
+Unpolished Organic Rajma (Red),Tata Sampann,152,132,500 g,4.610000133514404,2800.0,True,dal,28,13.2,BlinkIt
+Premium Malka Masoor (Malka Masoor Bele),Whole Farm,120,65,500 g,4.619999885559082,7678.0,True,dal,29,45.8,BlinkIt
+Organic Moong Dal (Dhuli) Split,Organic Tattva,155,121,500 g,4.679999828338623,1595.0,True,dal,30,21.9,BlinkIt
+Organic Red Rajma,Organic Tattva,175,136,500 g,4.579999923706055,562.0,True,dal,31,22.3,BlinkIt
+Unpolished Kali Urad (Sabut) (Uddina Kalu),Tata Sampann,110,110,500 g,4.71999979019165,4312.0,True,dal,32,0.0,BlinkIt
+Chana Dal (Kadale Bele),Bhagyalakshmi,75,73,500 g,4.71999979019165,866.0,True,dal,33,2.7,BlinkIt
+Unpolished Black Masoor Dal,Tata Sampann,152,140,1 kg,4.739999771118164,3090.0,True,dal,35,7.9,BlinkIt
+Urad (Sabut),24 Mantra Organic,180,139,500 g,4.519999980926514,493.0,True,dal,36,22.8,BlinkIt
+High Protein Paneer,Akshayakalpa Organic,173,173,200 g,4.309999942779541,797.0,True,paneer,1,0.0,BlinkIt
+Paneer,Milky Mist,135,105,200 g,4.630000114440918,37838.0,True,paneer,2,22.2,BlinkIt
+Malai Paneer,Akshayakalpa Organic,145,145,200 g,4.489999771118164,5366.0,True,paneer,4,0.0,BlinkIt
+Low Fat Paneer,Organic Mandya,160,152,200 g,4.510000228881836,84.0,True,paneer,5,5.0,BlinkIt
+Fresh Malai Paneer,Amul,105,105,200 g,4.659999847412109,35.0,True,paneer,6,0.0,BlinkIt
+Low Fat High Protein Paneer,Milky Mist,160,109,200 g,4.539999961853027,8495.0,True,paneer,7,31.9,BlinkIt
+100% Natural Coconut Water - No Preservative,Yu,250,123,1 ltr,4.269999980926514,12576.0,True,paneer,9,50.8,BlinkIt
+Classic Block Paneer,Gowardhan,130,85,200 g,4.510000228881836,45264.0,True,paneer,10,34.6,BlinkIt
+Fresh Paneer,Heritage,115,101,200 g,4.610000133514404,18014.0,True,paneer,11,12.2,BlinkIt
+Soft and Creamy Paneer,iD,145,143,200 g,4.409999847412109,5731.0,True,paneer,12,1.4,BlinkIt
+Tofu,Bio Nutrients Pure Diet,57,57,200 g,3.9700000286102295,10839.0,True,paneer,13,0.0,BlinkIt
+Nourish+ High Protein Paneer,Heritage,150,131,240 g,4.260000228881836,369.0,True,paneer,14,12.7,BlinkIt
+Pouch Curd,Nandini,28,28,500 g,4.679999828338623,11.0,True,paneer,15,0.0,BlinkIt
+Farm Fresh Pouch Curd,Milky Mist,42,39,400 g,4.75,26677.0,True,paneer,27,7.1,BlinkIt
+Probiotic Pouch Curd,Akshayakalpa Organic,55,55,500 g,4.71999979019165,7326.0,True,paneer,28,0.0,BlinkIt
+Artisanal Organic Set Cup Curd,Akshayakalpa Organic,155,155,1 kg,4.610000133514404,6048.0,True,paneer,30,0.0,BlinkIt
+Amrutha Organic Pouch Curd,Akshayakalpa Organic,70,70,500 g,4.699999809265137,2541.0,True,paneer,31,0.0,BlinkIt
+Total Pouch Curd,Heritage,38,35,500 g,4.690000057220459,48968.0,True,paneer,32,7.9,BlinkIt
+Classic Cup Curd,Mother Dairy,50,50,400 g,4.650000095367432,13.0,True,paneer,34,0.0,BlinkIt

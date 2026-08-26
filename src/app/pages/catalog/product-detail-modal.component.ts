@@ -65,37 +65,49 @@ import { CartService } from '../../core/services/cart.service';
     </div>
   `,
   styles: [`
+    :host {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+    }
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      z-index: var(--z-modal);
+      z-index: 1;
       background: rgba(15, 23, 42, 0.65);
       backdrop-filter: blur(6px);
     }
     .modal-card {
-      position: fixed;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative;
+      z-index: 2;
       width: 90%;
       max-width: 760px;
-      max-height: 90vh;
+      max-height: 85vh;
       overflow-y: auto;
-      z-index: calc(var(--z-modal) + 1);
-      background: #fff;
-      border-radius: var(--radius-lg);
-      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.3);
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
       padding: 2rem;
+      margin: auto;
     }
     .close-btn {
       position: absolute;
       top: 16px; right: 16px;
-      background: var(--bg-warm);
+      background: #f1f5f9;
       border: none;
       width: 36px; height: 36px;
       border-radius: 50%;
       font-size: 1.125rem;
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
+      z-index: 10;
+    }
+    .close-btn:hover {
+      background: #e2e8f0;
     }
     .modal-grid {
       display: grid;
@@ -105,31 +117,31 @@ import { CartService } from '../../core/services/cart.service';
     }
     @media (max-width: 640px) {
       .modal-grid { grid-template-columns: 1fr; }
-      .modal-card { padding: 1.25rem; }
+      .modal-card { padding: 1.25rem; width: 94%; }
     }
     .modal-img-wrap {
       aspect-ratio: 1 / 1;
       background: #F8FAFC;
-      border-radius: var(--radius-md);
+      border-radius: 12px;
       overflow: hidden;
       display: flex; align-items: center; justify-content: center;
       padding: 1rem;
     }
-    .main-img { width: 100%; height: 100%; object-fit: contain; }
-    .modal-cat { font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase; }
-    .modal-title { font-family: var(--font-heading); font-size: 1.375rem; font-weight: 800; color: var(--text-dark); margin-block: 0.35rem 0.75rem; }
+    .main-img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .modal-cat { font-size: 0.75rem; font-weight: 700; color: #2563eb; text-transform: uppercase; }
+    .modal-title { font-family: var(--font-heading); font-size: 1.375rem; font-weight: 800; color: #1e293b; margin-block: 0.35rem 0.75rem; }
     .modal-price-box { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
-    .modal-price { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--text-dark); }
-    .modal-orig-price { font-size: 1rem; color: var(--text-muted); text-decoration: line-through; }
-    .modal-save-pill { background: var(--accent-fresh-bg); color: var(--accent-fresh); font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); }
-    .modal-desc { font-size: 0.9375rem; color: var(--text-light); line-height: 1.6; margin-bottom: 1.25rem; }
+    .modal-price { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: #0f172a; }
+    .modal-orig-price { font-size: 1rem; color: #94a3b8; text-decoration: line-through; }
+    .modal-save-pill { background: #dcfce7; color: #15803d; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 999px; }
+    .modal-desc { font-size: 0.9375rem; color: #475569; line-height: 1.6; margin-bottom: 1.25rem; }
     .variant-picker { margin-bottom: 1.25rem; }
-    .variant-picker label { font-size: 0.8125rem; font-weight: 700; color: var(--text-mid); display: block; margin-bottom: 0.5rem; }
+    .variant-picker label { font-size: 0.8125rem; font-weight: 700; color: #334155; display: block; margin-bottom: 0.5rem; }
     .variant-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .variant-pill { padding: 0.4rem 0.85rem; border-radius: var(--radius-sm); border: 1.5px solid var(--border); background: #fff; font-size: 0.8125rem; font-weight: 600; cursor: pointer; }
-    .variant-pill.active { border-color: var(--primary); background: rgba(37, 99, 235, 0.08); color: var(--primary); font-weight: 800; }
+    .variant-pill { padding: 0.4rem 0.85rem; border-radius: 6px; border: 1.5px solid #cbd5e1; background: #fff; font-size: 0.8125rem; font-weight: 600; cursor: pointer; }
+    .variant-pill.active { border-color: #2563eb; background: rgba(37, 99, 235, 0.08); color: #2563eb; font-weight: 800; }
     .modal-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
-    .modal-stepper { display: flex; align-items: center; background: var(--bg-warm); border: 1px solid var(--border); border-radius: var(--radius-full); overflow: hidden; }
+    .modal-stepper { display: flex; align-items: center; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 999px; overflow: hidden; }
     .modal-stepper button { width: 36px; height: 36px; border: none; background: none; font-size: 1.125rem; font-weight: 800; cursor: pointer; }
     .modal-stepper span { font-size: 1rem; font-weight: 800; padding-inline: 0.75rem; }
     .add-basket-btn { flex: 1; min-width: 200px; }

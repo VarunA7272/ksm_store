@@ -7,6 +7,13 @@ import { Product } from '../../core/models/product.model';
 import { Category } from '../../core/models/category.model';
 import { ProductCardComponent } from '../../shared/components/product-card/product-card.component';
 import { ProductDetailModalComponent } from './product-detail-modal.component';
+import { expandGroceryQuery } from '../../core/utils/grocery-search.utils';
+
+export interface CategoryGroup {
+  categoryName: string;
+  categorySlug: string;
+  products: Product[];
+}
 
 @Component({
   selector: 'app-catalog',
@@ -47,7 +54,7 @@ import { ProductDetailModalComponent } from './product-detail-modal.component';
         </div>
       </section>
 
-      <!-- Main Products Grid -->
+      <!-- Main Products Grid Grouped Category-Wise (Strictly 1-Row Carousels with Arrows) -->
       <section class="catalog-grid-section section-sm">
         <div class="container">
           <div class="catalog-meta-bar">
@@ -58,12 +65,21 @@ import { ProductDetailModalComponent } from './product-detail-modal.component';
           </div>
 
           @if (loading()) {
-            <div class="product-grid">
-              @for (_ of [1,2,3,4,5,6,7,8,9,10,11,12]; track $index) {
-                <div class="skeleton" style="height: 300px; border-radius: var(--radius-md)"></div>
-              }
+            <div class="shimmer-rail-group">
+              <div class="shimmer-rail-grid">
+                @for (_ of [1,2,3,4,5,6]; track $index) {
+                  <div class="shimmer-card">
+                    <div class="shimmer shimmer-img"></div>
+                    <div class="shimmer shimmer-title"></div>
+                    <div class="shimmer-footer">
+                      <div class="shimmer shimmer-price"></div>
+                      <div class="shimmer shimmer-btn"></div>
+                    </div>
+                  </div>
+                }
+              </div>
             </div>
-          } @else if (filteredProducts().length === 0) {
+          } @else if (categoryGroups().length === 0) {
             <div class="empty-state card">
               <span class="empty-emoji">🔍</span>
               <h3>No groceries found matching "{{ searchQuery }}"</h3>
@@ -71,11 +87,36 @@ import { ProductDetailModalComponent } from './product-detail-modal.component';
               <button class="btn btn-primary btn-sm" (click)="resetFilters()">Reset Filters</button>
             </div>
           } @else {
-            <div class="product-grid">
-              @for (product of visibleProducts(); track product.id) {
-                <app-product-card [product]="product" (openDetail)="selectedProduct.set($event)"></app-product-card>
+            <!-- Strict 1-Row Category Carousels -->
+            @for (group of categoryGroups(); track group.categoryName) {
+              @if (group.products.length > 0) {
+                <div class="category-block">
+                  <div class="category-block-header">
+                    <h2>{{ group.categoryName }}</h2>
+                    <span class="category-count-badge">{{ group.products.length }} items</span>
+                  </div>
+
+                  <!-- 1-Row Carousel Slider with Arrow Buttons -->
+                  <div class="rail-carousel-wrap">
+                    <button class="carousel-arrow left-arrow" (click)="scrollRail(railRef, -360)" aria-label="Scroll left">
+                      ‹
+                    </button>
+
+                    <div #railRef class="horizontal-rail">
+                      @for (product of group.products; track product.id) {
+                        <div class="rail-item">
+                          <app-product-card [product]="product" (openDetail)="selectedProduct.set($event)"></app-product-card>
+                        </div>
+                      }
+                    </div>
+
+                    <button class="carousel-arrow right-arrow" (click)="scrollRail(railRef, 360)" aria-label="Scroll right">
+                      ›
+                    </button>
+                  </div>
+                </div>
               }
-            </div>
+            }
 
             @if (visibleProducts().length < filteredProducts().length) {
               <div class="load-more-wrap">
@@ -95,7 +136,7 @@ import { ProductDetailModalComponent } from './product-detail-modal.component';
     </div>
   `,
   styles: [`
-    .catalog-page { padding-top: 60px; }
+    .catalog-page { padding-top: 60px; background: #f8fafc; }
     .catalog-header { padding: 2.5rem 0 1.5rem; background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #fff; text-align: center; }
     .catalog-header h1 { font-family: var(--font-heading); font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; margin-block: 0.35rem 0.5rem; }
     .catalog-header p { color: var(--text-muted); font-size: 0.9375rem; max-width: 580px; margin-inline: auto; margin-bottom: 1.25rem; }
@@ -109,11 +150,66 @@ import { ProductDetailModalComponent } from './product-detail-modal.component';
     .filter-pills-section { background: #fff; border-bottom: 1px solid var(--border); padding-block: 0.625rem; position: sticky; top: 60px; z-index: 80; box-shadow: var(--shadow-sm); }
     .pills-scroll { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.15rem; -webkit-overflow-scrolling: touch; }
     .pill-btn { flex: 0 0 auto; padding: 0.4rem 1rem; border-radius: var(--radius-full); border: 1.5px solid var(--border); background: var(--bg-warm); color: var(--text-mid); font-size: 0.8125rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: all var(--transition-fast); }
-    .pill-btn:hover, .pill-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25); }
+    .pill-btn:hover, .pill-btn.active { background: #0c831f; color: #fff; border-color: #0c831f; box-shadow: 0 4px 12px rgba(12, 131, 31, 0.25); }
 
-    .catalog-meta-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.875rem; color: var(--text-light); }
-    .meta-count strong { color: var(--primary); font-weight: 800; }
-    .search-tag { background: rgba(37, 99, 235, 0.1); color: var(--primary); padding: 0.2rem 0.65rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.75rem; }
+    .catalog-meta-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; font-size: 0.875rem; color: var(--text-light); }
+    .meta-count strong { color: #0c831f; font-weight: 800; }
+    .search-tag { background: rgba(12, 131, 31, 0.1); color: #0c831f; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.75rem; }
+
+    /* Grouped Category 1-Row Carousel Blocks */
+    .category-block { margin-bottom: 2.25rem; }
+    .category-block-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 2px solid #e2e8f0; }
+    .category-block-header h2 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #1e293b; }
+    .category-count-badge { font-size: 0.75rem; font-weight: 700; background: #f1f5f9; color: #64748b; padding: 3px 10px; border-radius: 999px; }
+
+    /* Carousel Slider Wrapper & Floating Arrows */
+    .rail-carousel-wrap { position: relative; display: flex; align-items: center; }
+    .horizontal-rail {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-block: 0.25rem;
+      width: 100%;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .horizontal-rail::-webkit-scrollbar { display: none; }
+    .rail-item { flex: 0 0 190px; }
+    @media (max-width: 600px) { .rail-item { flex: 0 0 155px; } }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      color: #1f1f1f;
+      font-size: 1.25rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 150ms ease;
+    }
+    .carousel-arrow:hover {
+      background: #0c831f;
+      color: #ffffff;
+      border-color: #0c831f;
+      transform: translateY(-50%) scale(1.1);
+    }
+    .left-arrow { left: -16px; }
+    .right-arrow { right: -16px; }
+
+    @media (max-width: 768px) {
+      .carousel-arrow { display: none; }
+    }
 
     .load-more-wrap { text-align: center; margin-top: 2.5rem; }
     .load-more-btn { padding: 0.875rem 2rem; font-weight: 800; }
@@ -131,7 +227,8 @@ export class CatalogComponent implements OnInit {
   allProducts = signal<Product[]>([]);
   filteredProducts = signal<Product[]>([]);
   visibleProducts = signal<Product[]>([]);
-  totalCount = signal<number>(41714);
+  categoryGroups = signal<CategoryGroup[]>([]);
+  totalCount = signal<number>(0);
 
   loading = signal(true);
   selectedCategory = signal<string>('');
@@ -151,9 +248,10 @@ export class CatalogComponent implements OnInit {
         this.supabase.getCategories(),
         this.supabase.getAllProducts()
       ]);
+
       this.categories.set(cats);
       this.allProducts.set(prods);
-      this.totalCount.set(prods.length || 41713);
+      this.totalCount.set(prods.length || 0);
 
       this.route.queryParams.subscribe(params => {
         if (params['category']) {
@@ -168,6 +266,10 @@ export class CatalogComponent implements OnInit {
     } finally {
       this.loading.set(false);
     }
+  }
+
+  scrollRail(element: HTMLDivElement, offset: number) {
+    element.scrollBy({ left: offset, behavior: 'smooth' });
   }
 
   selectCategory(catId: string) {
@@ -188,18 +290,58 @@ export class CatalogComponent implements OnInit {
     }
 
     if (this.searchQuery.trim()) {
-      const q = this.searchQuery.toLowerCase().trim();
-      list = list.filter(p => p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q) || (p.tags && p.tags.some(t => t.toLowerCase().includes(q))));
+      const expandedTerms = expandGroceryQuery(this.searchQuery);
+      list = list.filter(p => {
+        const text = (p.name + ' ' + (p.description || '') + ' ' + (p.tags ? p.tags.join(' ') : '')).toLowerCase();
+        return expandedTerms.some(term => text.includes(term));
+      });
     }
+
+    list = [...list].sort((a, b) => a.name.localeCompare(b.name));
 
     this.filteredProducts.set(list);
     this.displayLimit = 40;
-    this.visibleProducts.set(list.slice(0, this.displayLimit));
+    const slice = list.slice(0, this.displayLimit);
+    this.visibleProducts.set(slice);
+
+    // Group current visible slice by Category Name
+    const map = new Map<string, Product[]>();
+    slice.forEach(p => {
+      const catName = p.category?.name || 'Other Groceries';
+      if (!map.has(catName)) {
+        map.set(catName, []);
+      }
+      map.get(catName)!.push(p);
+    });
+
+    const groups: CategoryGroup[] = [];
+    map.forEach((prods, name) => {
+      groups.push({ categoryName: name, categorySlug: prods[0]?.category?.slug || '', products: prods });
+    });
+
+    this.categoryGroups.set(groups);
   }
 
   loadMore() {
     this.displayLimit += 40;
-    this.visibleProducts.set(this.filteredProducts().slice(0, this.displayLimit));
+    const slice = this.filteredProducts().slice(0, this.displayLimit);
+    this.visibleProducts.set(slice);
+
+    const map = new Map<string, Product[]>();
+    slice.forEach(p => {
+      const catName = p.category?.name || 'Other Groceries';
+      if (!map.has(catName)) {
+        map.set(catName, []);
+      }
+      map.get(catName)!.push(p);
+    });
+
+    const groups: CategoryGroup[] = [];
+    map.forEach((prods, name) => {
+      groups.push({ categoryName: name, categorySlug: prods[0]?.category?.slug || '', products: prods });
+    });
+
+    this.categoryGroups.set(groups);
   }
 
   resetFilters() {

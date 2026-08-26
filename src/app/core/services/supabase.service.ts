@@ -6,175 +6,9 @@ import { Category } from '../models/category.model';
 import { Review } from '../models/review.model';
 import { CloudinaryService } from './cloudinary.service';
 
-// ─── Initial Grocery Mock Data ────────────────────────────────────────────────
-const INITIAL_CATEGORIES: Category[] = [
-  { id: 'cat-1', name: 'Fresh Fruits & Veggies', slug: 'fruits-veggies', description: 'Farm fresh organic fruits and green vegetables', display_order: 1, is_active: true, created_at: new Date().toISOString() },
-  { id: 'cat-2', name: 'Atta, Rice & Dal', slug: 'atta-rice-dal', description: 'Chakki fresh wheat flour, basmati rice, and pulses', display_order: 2, is_active: true, created_at: new Date().toISOString() },
-  { id: 'cat-3', name: 'Oil, Ghee & Spices', slug: 'oil-ghee-spices', description: 'Pure mustard oil, cow ghee, and aromatic whole spices', display_order: 3, is_active: true, created_at: new Date().toISOString() },
-  { id: 'cat-4', name: 'Dairy, Milk & Bakery', slug: 'dairy-bakery', description: 'Fresh milk, butter, paneer, and daily bread', display_order: 4, is_active: true, created_at: new Date().toISOString() },
-  { id: 'cat-5', name: 'Snacks, Biscuits & Drinks', slug: 'snacks-drinks', description: 'Namkeen, instant noodles, tea, coffee & juices', display_order: 5, is_active: true, created_at: new Date().toISOString() },
-  { id: 'cat-6', name: 'Household & Cleaning', slug: 'household-cleaning', description: 'Detergents, surface cleaners, and home care items', display_order: 6, is_active: true, created_at: new Date().toISOString() },
-];
-
-const INITIAL_PRODUCTS: Product[] = [
-  {
-    id: 'prod-1',
-    name: 'Aashirvaad Shuddh Chakki Atta',
-    slug: 'aashirvaad-shuddh-chakki-atta',
-    description: '100% pure whole wheat chakki flour. Rich in dietary fiber, absorbs more water to keep rotis soft and fresh for hours.',
-    price: 280,
-    original_price: 320,
-    images: ['https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=800&q=80'],
-    category_id: 'cat-2',
-    category: { name: 'Atta, Rice & Dal', slug: 'atta-rice-dal' },
-    unit: '5 kg Pack',
-    sizes: ['5 kg Pack', '10 kg Pack'],
-    tags: ['Bestseller', 'Daily Essential'],
-    is_active: true,
-    is_featured: true,
-    created_at: new Date().toISOString()
-  },
-  {
-    id: 'prod-2',
-    name: 'Fortune Sunlite Refined Sunflower Oil',
-    slug: 'fortune-sunlite-sunflower-oil',
-    description: 'Light, healthy refined sunflower oil rich in Vitamin E. Perfect for everyday cooking, frying, and baking.',
-    price: 135,
-    original_price: 160,
-    images: ['https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=800&q=80'],
-    category_id: 'cat-3',
-    category: { name: 'Oil, Ghee & Spices', slug: 'oil-ghee-spices' },
-    unit: '1 Litre Pouch',
-    sizes: ['1 Litre Pouch', '5 Litre Jar'],
-    tags: ['Essential', 'Healthy'],
-    is_active: true,
-    is_featured: true,
-    created_at: new Date().toISOString()
-  },
-  {
-    id: 'prod-3',
-    name: 'Fresh Farm Cavendish Bananas',
-    slug: 'fresh-farm-cavendish-bananas',
-    description: 'Naturally ripened, sweet, nutrient-dense fresh yellow bananas sourced directly from local orchards.',
-    price: 50,
-    original_price: 65,
-    images: ['https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=800&q=80'],
-    category_id: 'cat-1',
-    category: { name: 'Fresh Fruits & Veggies', slug: 'fruits-veggies' },
-    unit: '1 Dozen (12 Pcs)',
-    sizes: ['1 Dozen', '2 Dozen'],
-    tags: ['Organic', 'Farm Fresh'],
-    is_active: true,
-    is_featured: true,
-    created_at: new Date().toISOString()
-  },
-  {
-    id: 'prod-4',
-    name: 'Amul Pasteurised Salted Butter',
-    slug: 'amul-pasteurised-salted-butter',
-    description: 'The iconic taste of India! Made from pure milk fat. Creamy, delicious, and ideal for toasts, parathas, and cooking.',
-    price: 58,
-    original_price: 60,
-    images: ['https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?auto=format&fit=crop&w=800&q=80'],
-    category_id: 'cat-4',
-    category: { name: 'Dairy, Milk & Bakery', slug: 'dairy-bakery' },
-    unit: '100g Pack',
-    sizes: ['100g Pack', '500g Pack'],
-    tags: ['Dairy', 'Amul'],
-    is_active: true,
-    is_featured: true,
-    created_at: new Date().toISOString()
-  },
-  {
-    id: 'prod-5',
-    name: 'Daawat Rozana Super Basmati Rice',
-    slug: 'daawat-rozana-super-basmati-rice',
-    description: 'Aromatic, long-grain basmati rice aged to perfection. Non-sticky texture, ideal for daily pulao, biryani, and steam rice.',
-    price: 360,
-    original_price: 420,
-    images: ['https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=80'],
-    category_id: 'cat-2',
-    category: { name: 'Atta, Rice & Dal', slug: 'atta-rice-dal' },
-    unit: '5 kg Pack',
-    sizes: ['5 kg Pack', '10 kg Pack'],
-    tags: ['Aromatic', 'Basmati'],
-    is_active: true,
-    is_featured: true,
-    created_at: new Date().toISOString()
-  },
-  {
-    id: 'prod-6',
-    name: 'Maggi 2-Minute Masala Noodles',
-    slug: 'maggi-2-minute-masala-noodles',
-    description: 'India\'s favorite instant snack! Made with finest quality spices and wheat flour. Delicious, quick, and satisfying.',
-    price: 96,
-    original_price: 110,
-    images: ['https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=800&q=80'],
-    category_id: 'cat-5',
-    category: { name: 'Snacks, Biscuits & Drinks', slug: 'snacks-drinks' },
-    unit: 'Pack of 8 (560g)',
-    sizes: ['Pack of 4', 'Pack of 8', 'Pack of 12'],
-    tags: ['Instant Food', 'Bestseller'],
-    is_active: true,
-    is_featured: true,
-    created_at: new Date().toISOString()
-  },
-  {
-    id: 'prod-7',
-    name: 'Fresh Crisp Red Apples (Shimla)',
-    slug: 'fresh-crisp-red-apples-shimla',
-    description: 'Sweet, juicy, hand-picked Shimla red apples rich in antioxidants and vitamins.',
-    price: 140,
-    original_price: 180,
-    images: ['https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80'],
-    category_id: 'cat-1',
-    category: { name: 'Fresh Fruits & Veggies', slug: 'fruits-veggies' },
-    unit: '1 kg Pack',
-    sizes: ['500g', '1 kg', '2 kg'],
-    tags: ['Fresh', 'Fruit'],
-    is_active: true,
-    is_featured: false,
-    created_at: new Date().toISOString()
-  },
-  {
-    id: 'prod-8',
-    name: 'Surf Excel Easy Wash Detergent Powder',
-    slug: 'surf-excel-easy-wash-detergent-powder',
-    description: 'Removes tough stains like tea, oil, and curry easily without fading fabric colors.',
-    price: 195,
-    original_price: 230,
-    images: ['https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80'],
-    category_id: 'cat-6',
-    category: { name: 'Household & Cleaning', slug: 'household-cleaning' },
-    unit: '1 kg Pack',
-    sizes: ['1 kg Pack', '3 kg Pack'],
-    tags: ['Cleaning', 'Household'],
-    is_active: true,
-    is_featured: false,
-    created_at: new Date().toISOString()
-  }
-];
-
-const INITIAL_REVIEWS: Review[] = [
-  {
-    id: 'rev-1',
-    customer_name: 'Suresh Khandelwal',
-    rating: 5,
-    message: 'KSM always delivers fresh groceries within 45 minutes in Jabalpur. Ordering on WhatsApp is super fast!',
-    product_name: 'Aashirvaad Shuddh Chakki Atta',
-    is_approved: true,
-    created_at: new Date().toISOString()
-  },
-  {
-    id: 'rev-2',
-    customer_name: 'Meena Sharma',
-    rating: 5,
-    message: 'The fruits and vegetables are always clean and fresh. Wholesale rates are much better than local markets.',
-    product_name: 'Fresh Farm Cavendish Bananas',
-    is_approved: true,
-    created_at: new Date().toISOString()
-  }
-];
+const INITIAL_CATEGORIES: Category[] = [];
+const INITIAL_PRODUCTS: Product[] = [];
+const INITIAL_REVIEWS: Review[] = [];
 
 @Injectable({ providedIn: 'root' })
 export class SupabaseService {
@@ -387,7 +221,7 @@ export class SupabaseService {
   async getProducts(opts?: { categoryId?: string; featured?: boolean; limit?: number; offset?: number; search?: string }): Promise<Product[]> {
     if (this.supabase) {
       try {
-        let query = this.supabase.from('products').select('*, category:categories(name, slug)').eq('is_active', true).order('created_at', { ascending: false });
+        let query = this.supabase.from('products').select('*, category:categories(name, slug)').eq('is_active', true).order('name', { ascending: true });
         if (opts?.categoryId) query = query.eq('category_id', opts.categoryId);
         if (opts?.featured) query = query.eq('is_featured', true);
         if (opts?.search) query = query.ilike('name', `%${opts.search}%`);
@@ -408,6 +242,7 @@ export class SupabaseService {
       const s = opts.search.toLowerCase();
       list = list.filter(p => p.name.toLowerCase().includes(s) || p.description.toLowerCase().includes(s));
     }
+    list = list.sort((a, b) => a.name.localeCompare(b.name));
     if (opts?.limit) {
       list = list.slice(0, opts.limit);
     }
@@ -427,13 +262,23 @@ export class SupabaseService {
   async getAllProducts(opts?: { limit?: number; offset?: number }): Promise<Product[]> {
     if (this.supabase) {
       try {
-        let query = this.supabase.from('products').select('*, category:categories(name, slug)').order('created_at', { ascending: false });
+        let query = this.supabase.from('products').select('*, category:categories(name, slug)').order('name', { ascending: true });
         if (opts?.limit) query = query.limit(opts.limit);
         const { data, error } = await query;
         if (!error && data) return data;
       } catch {}
     }
-    return [...this.mockProducts];
+    return [...this.mockProducts].sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  async upsertProductsBatch(products: Partial<Product>[]): Promise<void> {
+    if (this.supabase) {
+      const { error } = await this.supabase.from('products').upsert(products, { onConflict: 'id' });
+      if (error) {
+        console.error('upsertProductsBatch error:', error.message);
+        throw error;
+      }
+    }
   }
 
   async createProduct(product: Partial<Product>): Promise<Product> {

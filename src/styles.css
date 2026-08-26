@@ -311,3 +311,78 @@ select option, .dark-input option, .form-select option {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+/* ─── Shimmer Loading Animation & Placeholder Cards ──────────────────────── */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.shimmer {
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+}
+
+.shimmer-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.shimmer-img {
+  width: 100%;
+  height: 160px;
+  border-radius: var(--radius-sm);
+}
+
+.shimmer-tag {
+  width: 35%;
+  height: 14px;
+  border-radius: var(--radius-xs);
+}
+
+.shimmer-title {
+  width: 85%;
+  height: 18px;
+  border-radius: var(--radius-xs);
+}
+
+.shimmer-sub {
+  width: 60%;
+  height: 14px;
+  border-radius: var(--radius-xs);
+}
+
+.shimmer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.shimmer-price {
+  width: 40%;
+  height: 22px;
+  border-radius: var(--radius-xs);
+}
+
+.shimmer-btn {
+  width: 35%;
+  height: 32px;
+  border-radius: var(--radius-full);
+}
